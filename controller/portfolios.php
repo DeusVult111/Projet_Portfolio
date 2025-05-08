@@ -4,9 +4,17 @@ class Portfolios extends Controller {
     var $Portfolio;
 
     function index() {
+        // Récupérer toutes les sections
         $d['sections'] = $this->Portfolio->getSections();
         $this->set($d);
         $this->render('index');
+    }
+
+    function section($id) {
+        // Récupérer une section spécifique
+        $d['section'] = $this->Portfolio->getSectionById($id);
+        $this->set($d);
+        $this->render('section');
     }
 
     // Mise à jour AJAX d'un champ de section

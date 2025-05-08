@@ -1,9 +1,8 @@
 <?php
 class Portfolio extends Model {
     public $table = "portfolio";
-    var $Portfolio;
 
-    // Récupérer les sections du portfolio
+    // Récupérer toutes les sections du portfolio
     function getSections() {
         return $this->find(array(
             "fields" => "*",
@@ -11,10 +10,11 @@ class Portfolio extends Model {
         ));
     }
 
-    // Mise à jour d'un champ spécifique d'une section
-    function updateField($id, $field, $value) {
-        $sql = "UPDATE " . $this->table . " SET " . $field . " = :value WHERE id = :id";
-        $sth = $this->db->prepare($sql);
-        return $sth->execute([':value' => $value, ':id' => $id]);
+    // Récupérer une section spécifique
+    function getSectionById($id) {
+        return $this->findFirst(array(
+            "conditions" => "id = :id",
+            "bind" => array("id" => $id)
+        ));
     }
 }
