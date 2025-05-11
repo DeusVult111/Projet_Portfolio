@@ -1,90 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJET D</title>
-    <link rel="icon" type="image/x-icon" href="/<?=WEBROOT2;?>/webroot/img/Project_d_logo.webp">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/<?=WEBROOT2;?>/webroot/css/acceuil.css">
-    <style>
-      body {
-        background-image: url('/<?=WEBROOT2;?>/webroot/img/fond.jpg');
-      }
-    </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Nathan Lac</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="webroot/img/favicon (1).png" rel="icon">
+  <link href="webroot/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="webroot/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="webroot/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="webroot/vendor/aos/aos.css" rel="stylesheet">
+  <link href="webroot/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="webroot/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="webroot/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body data-bs-theme="dark" class="d-flex flex-column min-vh-100">
-<nav class="navbar navbar-expand-sm bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/<?=WEBROOT2?>">
-      <img src="/<?=WEBROOT2;?>/webroot/img/Project_d_logo.webp" width="200" height="75" >
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="webroot/img/img_profile.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="webroot/img/logo.png" alt=""> -->
+      <h1 class="sitename">Nathan Lac</h1>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/<?=WEBROOT2?>/courses">Course</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/<?=WEBROOT2?>/vehicules">Vehicule</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/<?=WEBROOT2?>/pilotes">Pilote</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/<?=WEBROOT2?>/vehicules">Statistique</a>
-        </li>
-        </ul>
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <div class="container text-center p-2" style="transform: scale(0.75);">
-                  <a href="/<?= WEBROOT2 ?>/users" class="btn btn-outline-primary p-1" type="button" style="width: 150px;">
-                      <div class="card border-0" style="width: 100%; height: auto;">
-                          <img src="/<?= WEBROOT2 ?>/webroot/img/<?=$_SESSION['User']->photo;?>" 
-                              class="card-img-top rounded-circle mx-auto mt-2" 
-                              alt="Photo de profil" 
-                              style="width: 30px; height: 30px; object-fit: cover;">
-                          <div class="card-body p-1">
-                              <p class="card-title mb-0" style="font-size: 12.5px; font-weight: bold;">
-                                  <?= htmlspecialchars($_SESSION['User']->prenom . ' ' . $_SESSION['User']->nom); ?>
-                              </p>
-                          </div>
-                      </div>
-                  </a>
-              </div>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#accueil" class="active"><i class="bi bi-house navicon"></i>Accueil</a></li>
+        <li><a href="#a_propos"><i class="bi bi-person navicon"></i>A Propos</a></li>
+        <li><a href="#competences"><i class="bi bi-menu-button navicon"></i>Compétences</a></li>
+        <li><a href="#parcours"><i class="bi bi-file-earmark-text navicon"></i>Parcours</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#savoir-faire"><i class="bi bi-hdd-stack navicon"></i> Savoir-faire</a></li>
+        <!--<li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
             </li>
-        </ul>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li>-->
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+    <?php
+    echo $content_for_layout;
+    ?>
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Nathan LAC</strong> <span>Tous droits réservés</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+      </div>
     </div>
-  </div>
-</nav>
-<div class="container mt-auto">
-  <div class="row">
-    <div class="col">
-      <?php 
-        echo $this->Session->flash();
-      ?>
-    </div>
-  </div>
-</div>
 
-<section>
-<?php
-echo $content_for_layout;
-?>
-</section>
+  </footer>
 
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<footer class="bg-body-tertiary text-center py-3 mt-auto">
-  <p>BACK-OFFICE</p>
-  <p>SG La Chartreuse</p>
-</footer>
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="webroot/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="webroot/vendor/php-email-form/validate.js"></script>
+  <script src="webroot/vendor/aos/aos.js"></script>
+  <script src="webroot/vendor/typed.js/typed.umd.js"></script>
+  <script src="webroot/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="webroot/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="webroot/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="webroot/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="webroot/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="webroot/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.carousel').carousel({
+        interval: 2000 // Change l'intervalle de rotation en millisecondes
+      });
+    });
+  </script>
+
+  <!-- Main JS File -->
+  <script src="webroot/js/main.js"></script>
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </html>
+

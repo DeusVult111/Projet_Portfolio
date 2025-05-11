@@ -1,6 +1,6 @@
 -- Création de la base de données
-CREATE DATABASE IF NOT EXISTS Projet_Portfolio CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE Projet_Portfolio;
+CREATE DATABASE IF NOT EXISTS projet_portfolio CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE projet_portfolio;
 
 -- Table pour les utilisateurs
 CREATE TABLE IF NOT EXISTS users (
@@ -21,8 +21,25 @@ CREATE TABLE IF NOT EXISTS accueil (
 -- Table pour la section à propos
 CREATE TABLE IF NOT EXISTS a_propos (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    title_1 VARCHAR(255) NOT NULL,
+    title_2 VARCHAR(255) NOT NULL,
+    content_1 TEXT NOT NULL,
+    content_2 TEXT NOT NULL,
+    birthdate VARCHAR(10),
+    phone VARCHAR(20),
+    addr VARCHAR(255),
+    age INT,
+    degree VARCHAR(255),
+    email VARCHAR(100)
+) ENGINE=InnoDB;
+
+-- Table pour la section stats
+CREATE TABLE IF NOT EXISTS stat (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    icon VARCHAR(255) NOT NULL,
+    value INT NOT NULL,
     title VARCHAR(255) NOT NULL,
-    content TEXT NOT NULL
+    description TEXT NOT NULL
 ) ENGINE=InnoDB;
 
 -- Table pour la section compétences
@@ -70,8 +87,17 @@ INSERT INTO accueil (title, content) VALUES
 ("Nathan LAC", "étudiant en BTS SIO, développeur web, concepteur d'UI/UX");
 
 -- Insertion des données dans la table a_propos
-INSERT INTO a_propos (title, content) VALUES
-("À Propos", "Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologies.");
+INSERT INTO a_propos (title_1, title_2, content_1, content_2, birthdate, phone, addr, age, degree, email) VALUES
+("À Propos", "Concepteur d'UI/UX & Developpeur Web.",
+"Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologies.",
+"Mon objectif est de concevoir des expériences utilisateur optimisées en combinant esthétique et performance.",
+"29 Avril 2004", "06 08 76 24 68", "43340 LANDOS", 20, "Bac +2 BTS SIO", "lacnathan926@gmail.com");
+
+-- Insertion des données dans la table stats
+INSERT INTO stat (icon, value, title, description) VALUES
+("bi bi-emoji-smile", 5, "Solutions", "apportées aux clients"),
+("bi bi-journal-richtext", 15, "Projets", "Accomplis durant les deux années de formation et divers stages"),
+("bi bi-people", 8, "Projets", "éffectués en équipe");
 
 -- Insertion des données dans la table competences
 INSERT INTO competences (title, content) VALUES
@@ -96,7 +122,7 @@ INSERT INTO portfolio (title, content, technology, year, model, link) VALUES
 ("Maquette Site théâtre Mayapo", "Maquette réalisée pour le théâtre Mayapo", "HTML, CSS, JS", 2025, "Template Porto", NULL),
 ("Application de gestion de bandes dessinées", "Application permettant de gérer une collection de bandes dessinées", "PHP, HTML, CSS, MySQL", 2024, "CRUD PHP", NULL);
 
--- Insertion des données dans la table savoir_faire
+-- Insertion des données dans la table savoir-faire
 INSERT INTO savoir_faire (title, content) VALUES
 ("Développement Web & UI/UX", "Création de sites modernes et responsives avec un design intuitif. Utilisation des technologies HTML, CSS, PHP, JavaScript et frameworks adaptés."),
 ("Gestion de Bases de Données", "Conception et optimisation des bases de données avec MySQL. Amélioration des performances et gestion sécurisée des données."),

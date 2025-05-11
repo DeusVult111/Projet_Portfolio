@@ -3,10 +3,10 @@
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="28"'; ?>>
-      <?= htmlspecialchars($sections[7]->title) ?>
+      <?= htmlspecialchars($contact[0]->title) ?>
     </h2>
     <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="28"'; ?>>
-      <?= htmlspecialchars($sections[7]->content) ?>
+      <?= htmlspecialchars($contact[0]->content) ?>
     </p>
   </div><!-- End Section Title -->
 
