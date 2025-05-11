@@ -2,6 +2,19 @@
 class User extends Model {
     public $table = "users";
 
+    function authenticate($username, $password) {
+        $user = $this->findFirst(array(
+            'fields' => '*',
+            'condition' => 'username = :username',
+            'bind' => array('username' => $username)
+        ));
+
+        if ($user && password_verify($password, $user->password)) {
+            return $user;
+        }
+        return false;
+    }
+
     function getUser($login, $password) {
         return $this->findfirst(array(
             'fields' => "*",
