@@ -45,7 +45,7 @@
       <img src="webroot/img/img_profile.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="<?WEBROOT2?>" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="webroot/img/logo.png" alt=""> -->
       <h1 class="sitename">Nathan Lac</h1>
@@ -91,6 +91,9 @@
   </header>
 
   <main class="main">
+    <div class="container">
+      <?= $this->Session->flash() ?>
+    </div>
     <?php
     echo $content_for_layout;
     ?>
@@ -108,6 +111,11 @@
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+      </div>
+      <div class="text-center mt-3">
+        <?php if (!$this->Session->isLogged()): ?>
+          <a href="/<?=WEBROOT2?>/users" class="btn btn-link text-muted small">Activer le mode édition</a>        
+        <?php endif; ?>
       </div>
     </div>
 

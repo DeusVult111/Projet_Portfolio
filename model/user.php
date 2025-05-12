@@ -6,7 +6,7 @@ class User extends Model {
         $user = $this->findFirst(array(
             'fields' => '*',
             'condition' => 'username = :username',
-            'bind' => array('username' => $username)
+            'bind' => array(':username' => $username)
         ));
 
         if ($user && password_verify($password, $user->password)) {
@@ -18,7 +18,7 @@ class User extends Model {
     function getUser($login, $password) {
         return $this->findfirst(array(
             'fields' => "*",
-            'condition' => "AND login='".$login."' AND password='".md5($password)."'",
+            'condition' => "username='".$login."' AND password='".md5($password)."'",
             'limit' => 'LIMIT 1'
         ), PDO::FETCH_OBJ);
     }

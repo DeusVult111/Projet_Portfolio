@@ -16,7 +16,7 @@ class controller {
     function render($filename) {
         // On passe les données à la vue
         extract($this->vars);
-        if ($this->Session->isLogged() && $this->Session->user('role') === 'admin') {
+        if ($this->Session->isLogged()) {
             $this->layout = 'admin';
         } else {
             $this->layout = 'default';

@@ -132,3 +132,6 @@ INSERT INTO savoir_faire (title, content) VALUES
 -- Insertion des données dans la table contact
 INSERT INTO contact (title, content) VALUES
 ("Contact", "Contactez-moi ! Je vous répondrai avec plaisir.");
+
+INSERT INTO users (username, password, email) VALUES
+('admin', '$2y$10$eImiTXuWVxfM37uY4JANjQ==', 'admin@example.com');

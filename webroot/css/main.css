@@ -1402,6 +1402,184 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Login Section
+--------------------------------------------------------------*/
+.login {
+  min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4FAFD;
+}
+
+.login .container {
+  max-width: 800px;
+}
+
+.login .form-container {
+  background-color: var(--surface-color);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login .form-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--heading-color);
+}
+
+.login .form-container .input-group {
+  margin-bottom: 20px;
+}
+
+.login .form-container .input-group .input-group-text {
+  background-color: color-mix(in srgb, var(--heading-color), transparent 30%);
+  color: var(--contrast-color);
+  font-weight: 600;
+}
+
+.login .form-container .form-control {
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.login .form-container .form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: none;
+}
+
+.login .form-container .btn-primary {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.login .form-container .btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.login .form-container .btn-secondary {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.login .form-container .btn-secondary:hover {
+background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/*--------------------------------------------------------------
+# Edit Mode Indicator
+--------------------------------------------------------------*/
+.edit-mode-indicator {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-25%);
+  width: 400px; /* Largeur par défaut */
+  height: 55px; /* Hauteur par défaut */
+  background-color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.edit-mode-indicator span {
+  font-size: 16px;
+  color: var(--nav-color);
+  font-weight: bold;
+}
+
+.edit-mode-indicator i {
+  font-size: 16px;
+  color: var(--accent-color);
+}
+
+.edit-mode-indicator .btn {
+  font-size: 17px;
+  color: var(--contrast-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #ffc107; /* Bordure par défaut */
+  background-color: transparent; /* Fond transparent par défaut */
+  transition: border 0.1s ease; /* Transition fluide pour la bordure */
+}
+
+.edit-mode-indicator .btn:hover {
+  border: 3px solid #ffc107 !important; /* Grossit la bordure au survol */
+}
+
+/* Cacher le bouton Edit Mode Indicator sur les petits écrans */
+@media (max-width: 768px) {
+  .edit-mode-indicator {
+    display: none;
+  }
+}
+
+/* Bouton dans le menu pour les petits écrans */
+.edit-mode-mobile {
+  display: none; /* Caché par défaut */
+}
+
+@media (max-width: 768px) {
+  .edit-mode-mobile {
+    display: flex; /* Active le flexbox pour centrer les éléments */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    text-align: center;
+    gap: 10px; /* Ajoute un espacement entre les éléments */
+  }
+
+  
+
+  .edit-mode-mobile span {
+    font-size: 16px;
+    color: var(--nav-color);
+  }
+
+  .edit-mode-mobile i {
+    font-size: 16px;
+    color: var(--accent-color);
+  }
+
+  .edit-mode-mobile a {
+      font-size: 16px;
+      color: var(--contrast-color); /* Couleur de texte par défaut */
+      width: 155px; /* Largeur par défaut */
+      padding: 8px 13px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Centre le texte à l'intérieur du bouton */
+      gap: 5px;
+      border: 1px solid #ffc107; /* Bordure par défaut */
+      background-color: transparent; /* Fond transparent par défaut */
+      transition: border 0.3s ease; /* Transition fluide pour la bordure */
+  }
+
+  .edit-mode-mobile a:hover {
+      border: 3px solid #ffc107 !important; /* Grossit la bordure au survol */
+  }
+
+}
+/*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {

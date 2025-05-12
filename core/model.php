@@ -63,7 +63,7 @@ class model {
             $join = $data["join"];
         }
         if (isset($data["condition"])) {
-            $condition = $data["condition"];
+            $condition = " AND " .  $data["condition"];
         }
         if (isset($data["order"])) {
             $order = $data["order"];
@@ -76,9 +76,11 @@ class model {
             "SELECT DISTINCT " . $fields .
             " FROM " . $this->table . " " .
             $join .
-            " WHERE 1=1 " . $condition .
+            " WHERE 1=1" . $condition .
             " ORDER BY " . $order .
             " " . $limit;
+
+        //echo $sql;
         $sth = $this->db->prepare($sql);
         if ($sth->execute()) {
             return $sth->fetchAll($fetchMode);

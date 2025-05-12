@@ -10,6 +10,7 @@ require 'savoir_faire.php';
 require 'contact.php';
 ?>
 
+
 <script>
   // Gestion de l'édition inline
   document.addEventListener('input', function(event) {
