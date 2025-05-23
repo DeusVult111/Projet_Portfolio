@@ -1,0 +1,36 @@
+UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
+table: a_propos
+table: a_propos
+DATA: Array
+(
+    [birthdate] => 29 avril 2004
+)
+UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
+table: a_propos
+DATA: Array
+(
+    [birthdate] => 29 avril 2004
+)
+UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
+table: a_propos
+DATA: Array
+(
+    [birthdate] => 29 avril 2004
+    [id] => 1
+)
+UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
+table: a_propos
+DATA: Array
+(
+    [birthdate] => 29 avril 2004
+    [id] => 1
+)
+UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
+table: a_propos
+DATA: Array
+(
+    [birthdate] => 29 avril 2004
+    [id] => 1
+)
+UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
+EXECUTE RESULT: true

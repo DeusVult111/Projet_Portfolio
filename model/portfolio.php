@@ -25,7 +25,15 @@ class Portfolio extends Model {
 
     // Mettre à jour un champ spécifique dans la table définie
     public function updateField($id, $field, $value) {
-        $sql = "UPDATE {$this->table} SET {$field} = :value WHERE id = :id";
-        $this->query($sql, ['value' => $value, 'id' => $id]);
+        $data = [
+            'id' => $id,
+            $field => $value
+        ];
+
+        if ($this->save($data)) {
+            return true;
+        } else {
+            throw new Exception("Erreur lors de la mise à jour du champ $field pour l'ID $id.");
+        }
     }
 }

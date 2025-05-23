@@ -1,0 +1,486 @@
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => développeur web
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UI/UX
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UI/UX
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UI/UX
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&#039;UI/UX,caca
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;#039;UI/UX
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UI/UX
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&#039;UI/UX
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&#039;UI/UX
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;amp;#039;UI/UX
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;amp;amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;amp;amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;amp;amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;amp;amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;amp;amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;amp;amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d&amp;amp;amp;amp;#039;UI/UX,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI,truc
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => content
+    [value] => étudiant en BTS SIO,développeur web,concepteur d'UX/UI
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+Array
+(
+    [id] => 4
+    [field] => birthdate
+    [value] => 29 Avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 2
+    [field] => content
+    [value] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologie
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1"
+    [field] => birthdate
+    [value] => 29 Avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+Array
+(
+    [id] => 1"
+    [field] => birthdate
+    [value] => 29 Avril 2
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1"
+    [field] => birthdate
+    [value] => 29 Avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 Avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 Avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => content_1
+    [value] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologie
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 Avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 Avril 2
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 Avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 Avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => addr
+    [value] => 43340 LANDOS
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => addr
+    [value] => 43340 LANDOS
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 Avril 2
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 Avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 avril 2004
+    [table] => a_propos
+)
+Array
+(
+    [id] => 1
+    [field] => birthdate
+    [value] => 29 avril 2004
+    [table] => a_propos
+)

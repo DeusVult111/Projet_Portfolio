@@ -618,6 +618,25 @@ section,
   }
 }
 
+/* Centrer le bouton d'ajout et le styliser */
+#add-step-btn {
+  display: block;
+  margin: 25px auto 0 auto;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+#add-step-btn:hover,
+#add-step-btn:focus {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
+
 /*--------------------------------------------------------------
 # a_propos Section
 --------------------------------------------------------------*/
@@ -1413,14 +1432,15 @@ section,
 }
 
 .login .container {
+  font: var(--default-font);
   max-width: 800px;
 }
 
 .login .form-container {
   background-color: var(--surface-color);
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: var(--nav-color) 1px solid;
 }
 
 .login .form-container h2 {
@@ -1577,6 +1597,112 @@ background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   .edit-mode-mobile a:hover {
       border: 3px solid #ffc107 !important; /* Grossit la bordure au survol */
   }
+
+}
+
+/*--------------------------------------------------------------
+# Flash Messages
+--------------------------------------------------------------*/
+.flash-container {
+  position: fixed;
+  top: 15px;
+  right: -100%; /* Commence hors de l'écran à droite */
+  z-index: 1050; /* Au-dessus des autres éléments */
+  width: 90%; /* Largeur par défaut */
+  max-width: 500px; /* Limite la largeur maximale */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacement entre les messages */
+  animation: slideIn 1.5s ease-in-out forwards, fadeOut 1.5s ease-in-out 5s forwards;
+}
+
+.flash-container .alert {
+  position: relative;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flash-container .alert .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Animation pour le fade-in (glisse de la droite vers la gauche) */
+@keyframes slideIn {
+  from {
+    right: -100%; /* Hors de l'écran à droite */
+    opacity: 0;
+  }
+  to {
+    right: 20px; /* À 20px du bord droit */
+    opacity: 1;
+  }
+}
+
+/* Animation pour le fade-out (glisse de la gauche vers la droite) */
+@keyframes fadeOut {
+  from {
+    right: 20px; /* Position finale avant de disparaître */
+    opacity: 1;
+  }
+  to {
+    right: -100%; /* Hors de l'écran à droite */
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Modal d'edition
+--------------------------------------------------------------*/
+/* Centrer verticalement la modal accueil et l'agrandir */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 600px; /* Largeur de la modal */
+}
+
+.modal-header {
+  background-color: #F4FAFD;
+  color: #050d18;
+  border: none;
+  padding: 1.5rem 2.5rem;
+}
+
+.modal-header .btn-close {
+  color:var(--nav-dropdown-color);
+  background-color: var(--accent-color);
+
+}
+
+.modal-content {
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+/* Agrandir le corps de la modal */
+.modal-body {
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  min-height: 220px;
+}
+
+
+/* Footer de la modal : fond heading-color et boutons en groupe */
+.modal-footer {
+  background-color: #050d18!important;
+  display: flex;
+}
+/* Bouton groupe dans le footer*/
+.modal-footer .btn {
+  min-width: 60px;;
+  font-size: 18px;
 
 }
 /*--------------------------------------------------------------

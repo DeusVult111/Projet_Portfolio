@@ -105,8 +105,18 @@ class model {
                 $columns = implode(",", array_keys($data));
                 $placeholders = ":" . implode(", :", array_keys($data));
                 $sql = "INSERT INTO " . $this->table . " ($columns) VALUES ($placeholders)";
-                
+
+                file_put_contents('debug_sql.txt', $sql . PHP_EOL, FILE_APPEND);
+                // Ajout de la requête préparée pour le débogage
+                file_put_contents('debug_sql.txt', "table: " . $this->table . "\n", FILE_APPEND);
+
+
                 $sth = $this->db->prepare($sql);
+
+                // Ajout des valeurs dans le tableau de données
+                if ($sth->errorCode() !== '00000') {
+                    file_put_contents('debug_sql.txt', print_r($sth->errorInfo(), true), FILE_APPEND);
+                }
                 
                 // Exécution de la requête
                 if ($sth->execute($data)) {
@@ -124,18 +134,27 @@ class model {
                 $fields = implode(", ", array_map(function ($key) {
                     return "$key = :$key";
                 }, array_keys($data)));
-                
-                $sql = "UPDATE " . $this->table . " SET $fields WHERE id = :id";
-                
+
                 // Ajout de l'id dans les données
                 $data['id'] = $this->id;
+
+                $sql = "UPDATE " . $this->table . " SET $fields WHERE id = :id";
+
+                // Ajout de la requête préparée pour le débogage
+                file_put_contents('debug_sql.txt', "table: " . $this->table . "\n", FILE_APPEND);
+                file_put_contents('debug_sql.txt', "DATA: " . print_r($data, true), FILE_APPEND);
+                file_put_contents('debug_sql.txt', $sql . PHP_EOL, FILE_APPEND);
                 
                 $sth = $this->db->prepare($sql);
                 
                 // Exécution de la requête
-                if ($sth->execute($data)) {
-                    return true; // Succès
+
+                $result = $sth->execute($data);
+                file_put_contents('debug_sql.txt', "EXECUTE RESULT: " . var_export($result, true) . PHP_EOL, FILE_APPEND);
+                if ($result) {
+                    return true;
                 } else {
+                    file_put_contents('debug_sql.txt', "PDO ERROR: " . print_r($sth->errorInfo(), true), FILE_APPEND);
                     throw new Exception("Erreur lors de la mise à jour.");
                 }
             }

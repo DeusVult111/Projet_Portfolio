@@ -2,10 +2,10 @@
 <section id="portfolio" class="portfolio section light-background">
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="13"'; ?>>
+    <h2 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="13" data-table="portfolio"'; ?>>
       <?= htmlspecialchars($portfolio[0]->title) ?>
     </h2>
-    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="13"'; ?>>
+    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="13" data-table="portfolio"'; ?>>
       <?= htmlspecialchars($portfolio[0]->content) ?>
     </p>
   </div><!-- End Section Title -->
@@ -25,10 +25,10 @@
           <div class="portfolio-content h-100">
             <img src="webroot/img/portfolio/Garage_audi_MVC.png" class="img-fluid" alt="Garage Audi">
             <div class="portfolio-info">
-              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="14"'; ?>>
+              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="14" data-table="portfolio"'; ?>>
                 Garage Audi
               </h4>
-              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="14"'; ?>>
+              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="14" data-table="portfolio"'; ?>>
                 Site de gestion de véhicules
               </p>
               <a href="#portfolioModal" data-bs-toggle="modal" title="More Details" class="details-link"><i class="bi bi-zoom-in"></i></a>
@@ -72,7 +72,7 @@
                   </div>
                   <!-- Description à gauche -->
                   <div class="col-lg-4">
-                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="14"'; ?>>
+                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="14" data-table="portfolio"'; ?>>
                       Ce projet est une application de gestion de véhicules pour un garage Audi. construit sous forme de framework Modèle Vue Contrôleur, avec l'utilisation de CRUD et de Bootstrap pour le design.
                     </p>
                     <ul>
@@ -91,10 +91,10 @@
           <div class="portfolio-content h-100">
             <img src="webroot/img/portfolio/ProjetD.png" class="img-fluid" alt="ProjetD">
             <div class="portfolio-info">
-              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="15"'; ?>>
+              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="15" data-table="portfolio"'; ?>>
                 ProjetD
               </h4>
-              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="15"'; ?>>
+              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="15" data-table="portfolio"'; ?>>
                 Site de gestion de courses de voiture
               </p>
               <a href="#portfolioModal_1" data-bs-toggle="modal" title="More Details" class="details-link"><i class="bi bi-zoom-in"></i></a>
@@ -142,7 +142,7 @@
                   </div>
                   <!-- Description à gauche -->
                   <div class="col-lg-4">
-                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="15"'; ?>>
+                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="15" data-table="portfolio"'; ?>>
                       Ce projet est une application de gestion de véhicules, de circuit et de pilote pour des courses automobile. construit sous forme de framework Modèle Vue Contrôleur et avec l'utilisation de CRUD et de Bootstrap pour le design.
                     </p>
                     <ul>
@@ -161,10 +161,10 @@
           <div class="portfolio-content h-100">
             <img src="webroot/img/portfolio/Loto (1).png" class="img-fluid" alt="Loto">
             <div class="portfolio-info">
-              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="16"'; ?>>
+              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="16" data-table="portfolio"'; ?>>
                 Loto
               </h4>
-              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="16"'; ?>>
+              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="16" data-table="portfolio"'; ?>>
                 Application tirant 6 numéros au hasard
               </p>
               <a href="#portfolioModal_2" data-bs-toggle="modal" title="More Details" class="details-link"><i class="bi bi-zoom-in"></i></a>
@@ -208,7 +208,7 @@
                   </div>
                   <!-- Description à gauche -->
                   <div class="col-lg-4">
-                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="16"'; ?>>
+                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="16" data-table="portfolio"'; ?>>
                       Ce projet est une application de tirage aléatoire des numéros du loto. Programmé en C# et utilisant WinForms pour être affiché dans une fenêtre.
                     </p>
                     <ul>
@@ -227,10 +227,10 @@
           <div class="portfolio-content h-100">
             <img src="webroot/img/portfolio/Bataille (3).png" class="img-fluid" alt="Bataille">
             <div class="portfolio-info">
-              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="17"'; ?>>
+              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="17" data-table="portfolio"'; ?>>
                 Bataille
               </h4>
-              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="17"'; ?>>
+              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="17" data-table="portfolio"'; ?>>
                 Application faisant jouer deux joueurs automatiquement
               </p>
               <a href="#portfolioModal_3" data-bs-toggle="modal" title="More Details" class="details-link"><i class="bi bi-zoom-in"></i></a>
@@ -278,7 +278,7 @@
                   </div>
                   <!-- Description à gauche -->
                   <div class="col-lg-4">
-                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="17"'; ?>>
+                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="17" data-table="portfolio"'; ?>>
                       Ce projet est une application où 2 joueurs (bots) s'affrontent et déterminent un vainqueur suite à plusieurs tours et cartes tirées aléatoirement. Programmé en C# et utilisant WinForms pour être affiché dans une fenêtre et une Programmation Orientée Objet (POO).
                     </p>
                     <ul>
@@ -297,10 +297,10 @@
           <div class="portfolio-content h-100">
             <img src="webroot/img/portfolio/Site St-Jacques de Compostelle (1).png" class="img-fluid" alt="Site Ensemble Saint Jacques de Compostelle">
             <div class="portfolio-info">
-              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="18"'; ?>>
+              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="18" data-table="portfolio"'; ?>>
                 Site Ensemble Saint Jacques de Compostelle
               </h4>
-              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="18"'; ?>>
+              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="18" data-table="portfolio"'; ?>>
                 Site regroupant l'ensemble des sites des différents établissements de Saint Jacques de Compostelle
               </p>
               <a href="#portfolioModal_4" data-bs-toggle="modal" title="More Details" class="details-link"><i class="bi bi-zoom-in"></i></a>
@@ -352,7 +352,7 @@
                   </div>
                   <!-- Description à gauche -->
                   <div class="col-lg-4">
-                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="18"'; ?>>
+                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="18" data-table="portfolio"'; ?>>
                       Ce projet, effectué durant mon stage de deuxième année, est une refonte du site de l'ensemble scolaire Saint Jacques de Compostelle.
                     </p>
                     <ul>
@@ -372,10 +372,10 @@
           <div class="portfolio-content h-100">
             <img src="webroot/img/portfolio/Site St Do (1).png" class="img-fluid" alt="Site St Dominique">
             <div class="portfolio-info">
-              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="19"'; ?>>
+              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="19" data-table="portfolio"'; ?>>
                 Site collège Saint Dominique
               </h4>
-              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="19"'; ?>>
+              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="19" data-table="portfolio"'; ?>>
                 Site vitrine présentant le collège Saint Dominique
               </p>
               <a href="#portfolioModal_5" data-bs-toggle="modal" title="More Details" class="details-link"><i class="bi bi-zoom-in"></i></a>
@@ -427,7 +427,7 @@
                   </div>
                   <!-- Description à gauche -->
                   <div class="col-lg-4">
-                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="19"'; ?>>
+                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="19" data-table="portfolio"'; ?>>
                       Ce projet, effectué durant mon stage de deuxième année, est une mise à jour esthétique du site du collège Saint-Dominique.
                     </p>
                     <ul>
@@ -447,10 +447,10 @@
           <div class="portfolio-content h-100">
             <img src="webroot/img/portfolio/Site Ecole Polignac (1).png" class="img-fluid" alt="Site Ecole Polignac">
             <div class="portfolio-info">
-              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="20"'; ?>>
+              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="20" data-table="portfolio"'; ?>>
                 Site école Sainte Jeanne d'Arc
               </h4>
-              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="20"'; ?>>
+              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="20" data-table="portfolio"'; ?>>
                 Site vitrine présentant l'école Sainte Jeanne d'Arc
               </p>
               <a href="#portfolioModal_6" data-bs-toggle="modal" title="More Details" class="details-link"><i class="bi bi-zoom-in"></i></a>
@@ -502,7 +502,7 @@
                   </div>
                   <!-- Description à gauche -->
                   <div class="col-lg-4">
-                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="20"'; ?>>
+                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="20" data-table="portfolio"'; ?>>
                       Ce projet, effectué durant mon stage de deuxième année, est une mise à jour esthétique du site de l'école Sainte Jeanne d'Arc de Polignac.
                     </p>
                     <ul>
@@ -522,10 +522,10 @@
           <div class="portfolio-content h-100">
             <img src="webroot/img/portfolio/Maquette site theatre mayapo (1).png" class="img-fluid" alt="Maquette site theatre mayapo">
             <div class="portfolio-info">
-              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="21"'; ?>>
+              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="21" data-table="portfolio"'; ?>>
                 Maquette Site théâtre Mayapo
               </h4>
-              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="21"'; ?>>
+              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="21" data-table="portfolio"'; ?>>
                 Maquette réalisée pour le théâtre Mayapo
               </p>
               <a href="#portfolioModal_7" data-bs-toggle="modal" title="More Details" class="details-link"><i class="bi bi-zoom-in"></i></a>
@@ -569,7 +569,7 @@
                   </div>
                   <!-- Description à gauche -->
                   <div class="col-lg-4">
-                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="21"'; ?>>
+                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="21" data-table="portfolio"'; ?>>
                       Ce projet, effectué durant mon stage de deuxième année, est une maquette de site internet réalisée pour le théâtre Mayapo, adaptée d'une template Porto.
                     </p>
                     <ul>
@@ -588,10 +588,10 @@
           <div class="portfolio-content h-100">
             <img src="webroot/img/portfolio/Gestion BD (1).png" class="img-fluid" alt="Gestion BD">
             <div class="portfolio-info">
-              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="22"'; ?>>
+              <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="22" data-table="portfolio"'; ?>>
                 Application de gestion de bandes dessinées
               </h4>
-              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="22"'; ?>>
+              <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="22" data-table="portfolio"'; ?>>
                 Application permettant de gérer une collection de bandes dessinées
               </p>
               <a href="#portfolioModal_8" data-bs-toggle="modal" title="More Details" class="details-link"><i class="bi bi-zoom-in"></i></a>
@@ -643,7 +643,7 @@
                   </div>
                   <!-- Description à gauche -->
                   <div class="col-lg-4">
-                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="22"'; ?>>
+                    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="22" data-table="portfolio"'; ?>>
                       Ce projet est une application de gestion d'une collection de bandes dessinées, permettant ainsi de gérer les dessinateurs, les scénaristes, les éditeurs et les albums à l'aide de CRUD.
                     </p>
                     <ul>

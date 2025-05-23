@@ -16,7 +16,7 @@
                 </div>
                 <div class="d-flex justify-content-between">
                     <button type="submit" value="Envoyer" class="btn btn-primary">Se connecter</button>
-                    <a href="<?= WEBROOT2; ?>" class="btn btn-secondary">Retour</a>
+                    <a href="/<?= WEBROOT2; ?>" class="btn btn-secondary">Retour</a>
                 </div>
             </form>
         </div>

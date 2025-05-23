@@ -91,7 +91,7 @@
   </header>
 
   <main class="main">
-    <div class="container">
+    <div id="flash-container" class="flash-container">
       <?= $this->Session->flash() ?>
     </div>
     <?php
@@ -139,11 +139,7 @@
   <script src="webroot/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="webroot/vendor/swiper/swiper-bundle.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $('.carousel').carousel({
-        interval: 2000 // Change l'intervalle de rotation en millisecondes
-      });
-    });
+    window.WEBROOT2 = "<?= WEBROOT2 ?>";
   </script>
 
   <!-- Main JS File -->

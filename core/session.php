@@ -18,17 +18,17 @@
 
 		//méthode pour afficher un message
 		public function flash() {
-			if (isset($_SESSION['flash']['message'])){
-				$html = '<div class="alert alert-'.$_SESSION['flash']['type'].' d-flex align-items-center" role="alert">';
+			if (isset($_SESSION['flash']['message'])) {
+				$html = '<div class="alert alert-' . $_SESSION['flash']['type'] . ' d-flex align-items-center flash-message" role="alert">';
 				$html .= $_SESSION['flash']['icon'];
-				$html .= '<div> ';
+				$html .= '<div>';
 				$html .= $_SESSION['flash']['message'];
 				$html .= '</div>';
+				$html .= '<button type="button" class="btn-close ms-auto" aria-label="Close" onclick="this.parentElement.remove();"></button>';
 				$html .= '</div>';
-				$_SESSION['flash'] = array ();
+				$_SESSION['flash'] = array();
 				return $html;
 			}
-			
 		}	
 		
 		//init d'une variable de SESSION

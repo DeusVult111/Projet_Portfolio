@@ -229,3 +229,18 @@
   const cloneEl = document.querySelector(".logos-slide").cloneNode(true)
   const logos = document.querySelector('.logos').appendChild(cloneEl);
 })();
+
+window.showFlash = function(type, message) {
+  const flashDiv = document.getElementById('flash-container');
+  let icon = '';
+  if (type === 'success') icon = '<i class="bi bi-check-circle"></i>';
+  if (type === 'error') icon = '<i class="bi bi-exclamation-circle"></i>';
+  flashDiv.innerHTML = `
+    <div class="alert alert-${type} d-flex align-items-center flash-message" role="alert">
+      ${icon}
+      <div class="ms-2">${message}</div>
+      <button type="button" class="btn-close ms-auto" aria-label="Close" onclick="this.parentElement.remove();"></button>
+    </div>
+  `;
+  setTimeout(() => { flashDiv.innerHTML = ''; }, 3000);
+};
