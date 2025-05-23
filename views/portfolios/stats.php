@@ -4,7 +4,7 @@
     <div class="stats-grid">
       <?php foreach ($stat as $s): ?>
         <div class="stats-item">
-          <i class="<?= htmlspecialchars($s->icon) ?>"></i>
+          <i class="<?= htmlspecialchars($s->icon) ?> item-icon"></i>
           <span 
             data-purecounter-start="0" 
             data-purecounter-end="<?= htmlspecialchars($s->value) ?>" 
@@ -17,17 +17,28 @@
             <span><?= htmlspecialchars($s->description) ?></span>
           </p>
           <?php if ($this->Session->isLogged()): ?>
-            <button class="btn btn-warning btn-sm mt-2" onclick="editStat('<?= $s->id ?>', '<?= htmlspecialchars($s->icon) ?>', '<?= htmlspecialchars($s->value) ?>', '<?= htmlspecialchars($s->title) ?>', '<?= htmlspecialchars($s->description) ?>')">
-              Modifier
+            <button
+              class="btn btn-warning btn-sm mt-2"
+              onclick="editStat('<?= $s->id ?>', '<?= htmlspecialchars($s->icon) ?>', '<?= htmlspecialchars($s->value) ?>', '<?= htmlspecialchars($s->title) ?>', '<?= htmlspecialchars($s->description) ?>')"
+              title="Modifier"
+            >
+              <i class="bi bi-pencil-square edit-stat-icon"></i>
             </button>
           <?php endif; ?>
         </div>
       <?php endforeach; ?>
     </div>    
     <?php if ($this->Session->isLogged()): ?>
-      <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#statsModal">
-        Ajouter
-      </button>
+      <div class="text-center">
+        <button
+          class="btn btn-outline-primary btn-sm mt-4"
+          data-bs-toggle="modal"
+          data-bs-target="#statsModal"
+          id="add-stat-btn"
+        >
+          <i class="bi bi-plus-circle"></i> Ajouter un item
+        </button>
+      </div>
     <?php endif; ?>
   </div>
 </section>
@@ -61,8 +72,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-          <button type="submit" class="btn btn-primary">Enregistrer</button>
+           <button type="submit" class="btn btn-outline-warning"><i class="bi bi-floppy-fill"></i></button>
         </div>
       </form>
     </div>

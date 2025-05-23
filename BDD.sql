@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS a_propos (
     title_2 VARCHAR(255) NOT NULL,
     content_1 TEXT NOT NULL,
     content_2 TEXT NOT NULL,
-    birthdate VARCHAR(10),
+    birthdate VARCHAR(20),
     phone VARCHAR(20),
     addr VARCHAR(255),
     age INT,

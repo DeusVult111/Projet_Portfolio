@@ -45,11 +45,11 @@ class Portfolios extends Controller {
     // Mise à jour AJAX d'un champ de section
     function ajaxUpdateField() {
         file_put_contents('debug_ajax.txt', print_r($_POST, true), FILE_APPEND);
-        if ($this->Session->isLogged() && !empty($_POST['id']) && !empty($_POST['field']) && isset($_POST['value']) && !empty($_POST['table'])) {
-            $id = intval($_POST['id']);
-            $field = htmlspecialchars($_POST['field']);
-            $value = htmlspecialchars($_POST['value']);
-            $table = htmlspecialchars($_POST['table']);
+        if ($this->Session->isLogged() && !empty($_POST['field']) && isset($_POST['value']) && !empty($_POST['table'])) {
+            $id = !empty($_POST['id']) ? intval($_POST['id']) : null;
+            $field = $_POST['field'];
+            $value = $_POST['value'];
+            $table = $_POST['table'];
 
             $this->Portfolio->setTable($table);
             // Champs valides pour une section
@@ -81,55 +81,26 @@ class Portfolios extends Controller {
             ];
             if (in_array($field, $validFields)) {
                 try {
-                    // Mise à jour dans le modèle
-                    $this->Portfolio->updateField($id, $field, $value);
+                    $data = [$field => $value];
+                    if ($id) $data['id'] = $id;
+                    $this->Portfolio->save($data);
 
-                    // Envoi d'un message flash de succès
-                    $this->Session->setFlash('Modification réalisé avec succés', '<i class="bi bi-check-circle"></i>', 'success');
+                    $msg = $id ? 'Modification réalisée avec succès' : 'Création réalisée avec succès';
+                    $this->Session->setFlash($msg, '<i class="bi bi-check-circle"></i>', 'success');
                     echo json_encode(['status' => 'success']);
                 } catch (Exception $e) {
-                    // Envoi d'un message flash d'erreur
-                    $this->Session->setFlash('Erreur lors de la modification : ' . $e->getMessage(), '<i class="bi bi-exclamation-circle"></i>', 'danger');
-                    echo json_encode(['status' => 'error', 'message' => 'Erreur lors de la modification.']);
+                    $this->Session->setFlash('Erreur : ' . $e->getMessage(), '<i class="bi bi-exclamation-circle"></i>', 'danger');
+                    echo json_encode(['status' => 'error', 'message' => 'Erreur lors de la sauvegarde.']);
                 }
             } else {
-                // Envoi d'un message flash pour champ invalide
                 $this->Session->setFlash('Champ invalide.', '<i class="bi bi-exclamation-circle"></i>', 'danger');
                 echo json_encode(['status' => 'error', 'message' => 'Champ invalide']);
             }
         } else {
-            // Envoi d'un message flash pour données invalides
             $this->Session->setFlash('Données invalides.', '<i class="bi bi-exclamation-circle"></i>', 'danger');
             echo json_encode(['status' => 'error', 'message' => 'Données invalides']);
         }
         die();
     }
 
-
-    function ajaxSaveStat() {
-        if ($this->Session->isLogged() && isset($_POST['icon'], $_POST['value'], $_POST['title'], $_POST['description'])) {
-            $data = [
-                'icon' => htmlspecialchars($_POST['icon']),
-                'value' => intval($_POST['value']),
-                'title' => htmlspecialchars($_POST['title']),
-                'description' => htmlspecialchars($_POST['description']),
-            ];
-
-            if (!empty($_POST['id'])) {
-                // Modification
-                $data['id'] = intval($_POST['id']);
-                $this->Portfolio->setTable('stat');
-                $this->Portfolio->save($data);
-            } else {
-                // Création
-                $this->Portfolio->setTable('stat');
-                $this->Portfolio->save($data);
-            }
-
-            echo json_encode(['status' => 'success']);
-        } else {
-            echo json_encode(['status' => 'error', 'message' => 'Données invalides']);
-        }
-        die();
-    }
 }

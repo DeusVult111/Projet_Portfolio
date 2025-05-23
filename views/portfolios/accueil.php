@@ -13,7 +13,7 @@
         class="btn btn-warning mt-2"
         data-bs-toggle="modal"
         data-bs-target="#editAccueilContentModal"
-        data-steps="<?= $accueil[0]->content ?>"
+        data-steps="<?= htmlspecialchars($accueil[0]->content) ?>"
       >
        <i class="bi bi-pencil-square"></i>
       </button>

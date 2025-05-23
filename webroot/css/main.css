@@ -25,6 +25,7 @@
   --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --edit-color: #ffb300; /* Color used for edit icons in the stats section */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -712,7 +713,7 @@ section,
   transition: transform 0.3s ease, font-size 0.3s ease; /* Animation pour un effet fluide */
 }
 
-.stats .stats-item i {
+.stats .stats-item .item-icon  {
   color: var(--accent-color);
   display: block;
   font-size: 50px;
@@ -730,6 +731,37 @@ section,
   color: var(--default-color);
   font-size: 0.9rem;
   margin-top: 10px;
+}
+
+.stats .stats-item .edit-stat-icon {
+  font-size: 20px;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+
+
+
+.stats .btn-warning:hover .edit-stat-icon,
+.stats .btn-outline-primary:hover .edit-stat-icon {
+  color: var(--contrast-color);
+}
+
+#add-stat-btn {
+  display: block;
+  margin: 25px auto 0 auto;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+#add-stat-btn:hover,
+#add-stat-btn:focus {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
 }
 
 @media (max-width: 768px) {

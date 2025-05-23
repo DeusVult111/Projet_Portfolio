@@ -34,3 +34,187 @@ DATA: Array
 )
 UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
 EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [birthdate] => 29 avril 2004
+    [id] => 1
+)
+UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [phone] => 06 08 76 24 68
+    [id] => 1
+)
+UPDATE a_propos SET phone = :phone WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [phone] => 06 08 76 24 68 75954
+    [id] => 1
+)
+UPDATE a_propos SET phone = :phone WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [phone] => 06 08 76 24 68
+    [id] => 1
+)
+UPDATE a_propos SET phone = :phone WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [email] => lacnathan926@gmail.commm
+    [id] => 1
+)
+UPDATE a_propos SET email = :email WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [email] => lacnathan926@gmail.com
+    [id] => 1
+)
+UPDATE a_propos SET email = :email WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur We.
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d&amp;#039;UI/UX &amp;amp; Developpeur Web.
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [content_2] => Mon objectif est de concevoir des expériences utilisateur optimisées en combinant esthétique et performance.
+    [id] => 1
+)
+UPDATE a_propos SET content_2 = :content_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur Web.
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d&amp;#039;UI/UX &amp;amp; Developpeur Web.
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur Web.
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d'UI/UX & Developpeur Web"fsrgsrgs".
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur Web&quot;fsrgsrgs&quot;.
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur Web.
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [content_1] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d&#039;UI/UX, le développement web et les nouvelles technologies.
+    [id] => 1
+)
+UPDATE a_propos SET content_1 = :content_1 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [content_1] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologies.
+    [id] => 1
+)
+UPDATE a_propos SET content_1 = :content_1 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d'UI/UX & Developpeur Web.
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d'UI/UX & Developpeur Web. <script>alert('XSS')</script>
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: accueil
+DATA: Array
+(
+    [content] => étudiant en BTS SIO,développeur web,concepteur d'UI/UX
+    [id] => 1
+)
+UPDATE accueil SET content = :content WHERE id = :id
+EXECUTE RESULT: true
+table: a_propos
+DATA: Array
+(
+    [title_2] => Concepteur d'UI/UX & Developpeur Web.
+    [id] => 1
+)
+UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+EXECUTE RESULT: true
+table: accueil
+DATA: Array
+(
+    [title] => Nathan
+    [id] => 1
+)
+UPDATE accueil SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+table: accueil
+DATA: Array
+(
+    [title] => Nathan LAC
+    [id] => 1
+)
+UPDATE accueil SET title = :title WHERE id = :id
+EXECUTE RESULT: true
