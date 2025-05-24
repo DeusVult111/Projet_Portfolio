@@ -49,6 +49,13 @@ CREATE TABLE IF NOT EXISTS competences (
     content TEXT NOT NULL
 ) ENGINE=InnoDB;
 
+-- Table pour les items de compétences (progressbars)
+CREATE TABLE IF NOT EXISTS competences_item (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    value INT NOT NULL
+) ENGINE=InnoDB;
+
 -- Table pour la section parcours
 CREATE TABLE IF NOT EXISTS parcours (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -102,6 +109,19 @@ INSERT INTO stat (icon, value, title, description) VALUES
 -- Insertion des données dans la table competences
 INSERT INTO competences (title, content) VALUES
 ("Compétences", "Compétences acquises lors de ma formation et de mes divers stages");
+
+-- Insertion des données dans la table competences_item
+INSERT INTO competences_item (name, value) VALUES
+('HTML', 95),
+('CSS', 70),
+('JavaScript', 40),
+('Python', 75),
+('GIT', 80),
+('PHP', 80),
+('CMS', 50),
+('C#', 40),
+('SQL', 65),
+('Github', 80);
 
 -- Insertion des données dans la table parcours
 INSERT INTO parcours (title, content, date_range) VALUES

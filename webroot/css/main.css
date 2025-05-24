@@ -26,6 +26,7 @@
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --edit-color: #ffb300; /* Color used for edit icons in the stats section */
+  --delete-color: #dc3545; /* Color used for delete icons in the stats section */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -733,35 +734,47 @@ section,
   margin-top: 10px;
 }
 
-.stats .stats-item .edit-stat-icon {
-  font-size: 20px;
-  vertical-align: middle;
-  transition: color 0.2s;
+.stats-btn-group {
+  display: inline-flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(20, 157, 221, 0.05);
+  margin: 0 auto;
+  padding: 0;
 }
 
-
-
-.stats .btn-warning:hover .edit-stat-icon,
-.stats .btn-outline-primary:hover .edit-stat-icon {
-  color: var(--contrast-color);
+.stats-btn-group .btn {
+  border-radius: 0 !important;
+  margin: 0;
+  border-right: 1px solid #fff;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 21px;
 }
 
-#add-stat-btn {
-  display: block;
-  margin: 25px auto 0 auto;
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-  border-radius: 10px;
-  background: transparent;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
+.stats-btn-group .btn:last-child {
+  border-right: none;
 }
 
-#add-stat-btn:hover,
-#add-stat-btn:focus {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border-color: var(--accent-color);
+.stats-btn-group .btn-warning {
+  color: #fff;
+  background-color: var(--edit-color, #ffb300);
+  border-color: var(--edit-color, #ffb300);
+}
+
+.stats-btn-group .btn-warning:hover {
+  background-color: #ffa000;
+  border-color: #ffa000;
+}
+
+.stats-btn-group .btn-danger {
+  color: #fff;
+  background-color: var(--delete-color, #dc3545);
+  border-color: var(--delete-color, #dc3545);
+}
+
+.stats-btn-group .btn-danger:hover {
+  background-color: #b52a37;
+  border-color: #b52a37;
 }
 
 @media (max-width: 768px) {
@@ -854,6 +867,41 @@ section,
 .competences .logos-slide img {
   height: 60px;
   margin: 0 50px;
+}
+
+.competences-btn-group {
+  display: inline-flex;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
+.competences-btn-group .btn {
+  border-radius: 0 !important;
+  margin: 0;
+  border-right: 1px solid #fff;
+  font-size: 21px;
+}
+.competences-btn-group .btn:last-child {
+  border-right: none;
+}
+.competences-btn-group .btn-warning {
+  color: #fff;
+  background-color: var(--edit-color, #ffb300);
+  border-color: var(--edit-color, #ffb300);
+}
+.competences-btn-group .btn-warning:hover {
+  background-color: #ffa000;
+  border-color: #ffa000;
+}
+.competences-btn-group .btn-danger {
+  color: #fff;
+  background-color: var(--delete-color, #dc3545);
+  border-color: var(--delete-color, #dc3545);
+}
+.competences-btn-group .btn-danger:hover {
+  background-color: #b52a37;
+  border-color: #b52a37;
 }
 
 @keyframes slide {
@@ -1736,6 +1784,27 @@ background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   min-width: 60px;;
   font-size: 18px;
 
+}
+
+/*--------------------------------------------------------------
+# Add Item Button
+--------------------------------------------------------------*/
+#add-Item-btn {
+  display: block;
+  margin: 25px auto 0 auto;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+#add-Item-btn:hover,
+#add-Item-btn:focus {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
 }
 /*--------------------------------------------------------------
 # Starter Section Section

@@ -36,4 +36,15 @@ class Portfolio extends Model {
             throw new Exception("Erreur lors de la mise à jour du champ $field pour l'ID $id.");
         }
     }
+
+    // Supprimer un item par son id dans la table courante
+    public function deleteItem($id) {
+        $this->id = $id;
+        if ($this->delete()) {
+            return true;
+        } else {
+            throw new Exception("Erreur lors de la suppression de l'item avec l'ID $id.");
+        }
+    }
+
 }

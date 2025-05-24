@@ -139,6 +139,54 @@ document.addEventListener('DOMContentLoaded', function () {
 //---------------------------------------------------------------
 // Gestion de la modale d'édition des statistiques
 //---------------------------------------------------------------
+function editStat(id, icon, value, title, description) {
+  // Ouvre la modale
+  const modal = new bootstrap.Modal(document.getElementById('statsModal'));
+  modal.show();
+
+  // Remplit les champs du formulaire
+  document.getElementById('itemId').value = id;
+  document.getElementById('icon').value = icon;
+  document.getElementById('value').value = value;
+  document.getElementById('title').value = title;
+  document.getElementById('description').value = description;
+}
+
+// Gestion du bouton "Ajouter un item" pour stats
+const addStatBtn = document.getElementById('add-stat-btn');
+if (addStatBtn) {
+  addStatBtn.addEventListener('click', function () {
+    // Vide les champs du formulaire
+    document.getElementById('itemId').value = '';
+    document.getElementById('icon').value = '';
+    document.getElementById('value').value = '';
+    document.getElementById('title').value = '';
+    document.getElementById('description').value = '';
+    // Ouvre la modale
+    const modal = new bootstrap.Modal(document.getElementById('statsModal'));
+    modal.show();
+  });
+}
+
+function deleteItem(id) {
+  if (!confirm('Voulez-vous vraiment supprimer cet item ?')) return;
+  fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeleteItem', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `id=${encodeURIComponent(id)}&table=stat`
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success') {
+      showFlash('success', 'Suppression réussie');
+      setTimeout(() => location.reload(), 600);
+    } else {
+      showFlash('error', data.message || 'Erreur lors de la suppression');
+    }
+  })
+  .catch(() => showFlash('error', 'Erreur réseau'));
+}
+
 // Gestion de l'envoi du formulaire stats (création ou modification)
 const statsForm = document.getElementById('statsForm');
 if (statsForm) {
@@ -224,4 +272,109 @@ if (statsForm) {
       });
     }
   });
+
+//---------------------------------------------------------------
+// Gestion de la modale d'édition des compétences
+//---------------------------------------------------------------
+  function editCompetenceItem(id, name, value) {
+  const modal = new bootstrap.Modal(document.getElementById('competenceModal'));
+  modal.show();
+  document.getElementById('competenceItemId').value = id;
+  document.getElementById('competenceName').value = name;
+  document.getElementById('competenceValue').value = value;
+  }
+
+  const addCompetenceBtn = document.getElementById('add-competence-btn');
+  if (addCompetenceBtn) {
+    addCompetenceBtn.addEventListener('click', function () {
+      document.getElementById('competenceItemId').value = '';
+      document.getElementById('competenceName').value = '';
+      document.getElementById('competenceValue').value = '';
+      const modal = new bootstrap.Modal(document.getElementById('competenceModal'));
+      modal.show();
+    });
+  }
+
+  function deleteCompetenceItem(id) {
+    if (!confirm('Voulez-vous vraiment supprimer cette compétence ?')) return;
+    fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeleteItem', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `id=${encodeURIComponent(id)}&table=competences_item`
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        showFlash('success', 'Suppression réussie');
+        setTimeout(() => location.reload(), 600);
+      } else {
+        showFlash('error', data.message || 'Erreur lors de la suppression');
+      }
+    })
+    .catch(() => showFlash('error', 'Erreur réseau'));
+  }
+
+  const competenceForm = document.getElementById('competenceForm');
+  if (competenceForm) {
+    competenceForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const id = document.getElementById('competenceItemId').value;
+      const name = document.getElementById('competenceName').value;
+      const value = document.getElementById('competenceValue').value;
+
+      const fields = [
+        { field: 'name', value: name },
+        { field: 'value', value: value }
+      ];
+
+      function sendField(field, value, callback) {
+        let body = (id ? `id=${encodeURIComponent(id)}&` : '') +
+          `field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}&table=competences_item`;
+        fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body
+        })
+        .then(response => response.json())
+        .then(callback)
+        .catch(error => {
+          showFlash('error', 'Erreur lors de la sauvegarde');
+        });
+      }
+
+      if (id) {
+        let done = 0;
+        fields.forEach(({ field, value }) => {
+          sendField(field, value, function(data) {
+            done++;
+            if (done === fields.length) {
+              if (data.status === 'success') {
+                showFlash('success', 'Modification réussie');
+                setTimeout(() => location.reload(), 600);
+              } else {
+                showFlash('error', data.message || 'Erreur lors de la modification');
+              }
+            }
+          });
+        });
+      } else {
+        sendField('name', name, function(data) {
+          if (data.status === 'success') {
+            let newId = data.id;
+            sendField('value', value, function(data2) {
+              if (data2.status === 'success') {
+                showFlash('success', 'Création réussie');
+                setTimeout(() => location.reload(), 600);
+              } else {
+                showFlash('error', data2.message || 'Erreur lors de la création');
+              }
+            });
+          } else {
+            showFlash('error', data.message || 'Erreur lors de la création');
+          }
+        });
+      }
+    });
+  }
 }
+

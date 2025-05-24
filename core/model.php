@@ -159,8 +159,8 @@ class model {
                 }
             }
         } catch (Exception $e) {
-            // Gérer l'exception et afficher un message d'erreur
-            echo "<br> Erreur SQL : " . $e->getMessage() . "<br>";
+            // Log l'erreur dans debug_sql.txt au lieu de l'afficher à l'écran
+            file_put_contents('debug_sql.txt', "Erreur SQL : " . $e->getMessage() . PHP_EOL, FILE_APPEND);
             return false;
         }
     }
@@ -169,12 +169,16 @@ class model {
     //delete : un delete sur la clé primaire
     function delete() {
         $sql="DELETE  FROM " . $this->table ." WHERE id=:id";
-        //echo $sql;
+
+        file_put_contents('debug_sql.txt', "table: " . $this->table . "\n", FILE_APPEND);
+        file_put_contents('debug_sql.txt', $sql . PHP_EOL, FILE_APPEND);
+
         $sth = $this->db->prepare($sql);
         if ($sth->execute(array(':id' => $this->id))) {
             return true;
         } else {
-            echo "<br> Erreur SQL <br>";
+            file_put_contents('debug_sql.txt', "Erreur SQL lors du DELETE sur la table " . $this->table . PHP_EOL, FILE_APPEND);
+            return false;
         }
     }
 

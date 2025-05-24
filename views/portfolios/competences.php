@@ -11,69 +11,73 @@
   </div><!-- End Section Title -->
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="row competences-content competences-animation">
-      <div class="col-lg-6">
-        <div class="progress">
-          <span class="skill"><span>HTML</span> <i class="val">95%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+      <?php foreach ($competences_items as $item): ?>
+        <div class="col-lg-6">
+          <div class="progress">
+            <span class="skill">
+              <span><?= htmlspecialchars($item->name) ?></span>
+            </span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="<?= (int)$item->value ?>"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: <?= (int)$item->value ?>%;">
+              </div>
+            </div>
+            <?php if ($this->Session->isLogged()): ?>
+              <div class="btn-group mt-2 competences-btn-group" role="group">
+                <button class="btn btn-warning btn-sm"
+                  onclick="editCompetenceItem('<?= $item->id ?>', '<?= htmlspecialchars($item->name) ?>', '<?= (int)$item->value ?>')"
+                  title="Modifier">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button class="btn btn-danger btn-sm"
+                  onclick="deleteCompetenceItem('<?= $item->id ?>')"
+                  title="Supprimer">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            <?php endif; ?>
           </div>
-        </div><!-- End competences Item -->
-        <div class="progress">
-          <span class="skill"><span>CSS</span> <i class="val">70%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End competences Item -->
-        <div class="progress">
-          <span class="skill"><span>JavaScript</span> <i class="val">40%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End competences Item -->
-        <div class="progress">
-          <span class="skill"><span>Python</span> <i class="val">75%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End competences Item -->
-        <div class="progress">
-          <span class="skill"><span>GIT</span> <i class="val">80%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End competences Item -->
+        </div>
+      <?php endforeach; ?>
       </div>
-      <div class="col-lg-6">
-        <div class="progress">
-          <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+      <?php if ($this->Session->isLogged()): ?>
+        <div class="text-center">
+          <button class="btn btn-outline-primary btn-sm mt-4" id="add-competence-btn">
+            <i class="bi bi-plus-circle"></i> Ajouter une compétence
+          </button>
+        </div>
+      <?php endif; ?>
+
+      <!-- Modal pour Ajouter/Modifier une compétence -->
+      <div class="modal fade" id="competenceModal" tabindex="-1" aria-labelledby="competenceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="competenceModalLabel">Ajouter / Modifier une compétence</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="competenceForm">
+              <div class="modal-body">
+                <input type="hidden" id="competenceItemId" name="id">
+                <div class="mb-3">
+                  <label for="competenceName" class="form-label">Nom</label>
+                  <input type="text" class="form-control" id="competenceName" name="name" placeholder="Ex: HTML">
+                </div>
+                <div class="mb-3">
+                  <label for="competenceValue" class="form-label">Valeur (%)</label>
+                  <input type="number" class="form-control" id="competenceValue" name="value" min="0" max="100" placeholder="Ex: 80">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-warning"><i class="bi bi-floppy-fill"></i></button>
+              </div>
+            </form>
           </div>
-        </div><!-- End competences Item -->
-        <div class="progress">
-          <span class="skill"><span>CMS</span> <i class="val">50%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End competences Item -->
-        <div class="progress">
-          <span class="skill"><span>C#</span> <i class="val">40%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End competences Item -->
-        <div class="progress">
-          <span class="skill"><span>SQL</span> <i class="val">65%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End competences Item -->
-        <div class="progress">
-          <span class="skill"><span>Github</span> <i class="val">80%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End competences Item -->
+        </div>
       </div>
     </div>
     <div class="logos overflow-hidden py-5 px-0 position-relative" style="white-space: nowrap;">

@@ -1,220 +1,258 @@
-UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
-table: a_propos
-table: a_propos
+table: stat
 DATA: Array
 (
-    [birthdate] => 29 avril 2004
-)
-UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
-table: a_propos
-DATA: Array
-(
-    [birthdate] => 29 avril 2004
-)
-UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
-table: a_propos
-DATA: Array
-(
-    [birthdate] => 29 avril 2004
+    [title] => Solutions
     [id] => 1
 )
-UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
-table: a_propos
-DATA: Array
-(
-    [birthdate] => 29 avril 2004
-    [id] => 1
-)
-UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
-table: a_propos
-DATA: Array
-(
-    [birthdate] => 29 avril 2004
-    [id] => 1
-)
-UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
+UPDATE stat SET title = :title WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [birthdate] => 29 avril 2004
+    [icon] => bi bi-emoji-smile
     [id] => 1
 )
-UPDATE a_propos SET birthdate = :birthdate WHERE id = :id
+UPDATE stat SET icon = :icon WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [phone] => 06 08 76 24 68
+    [value] => 5
     [id] => 1
 )
-UPDATE a_propos SET phone = :phone WHERE id = :id
+UPDATE stat SET value = :value WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [phone] => 06 08 76 24 68 75954
+    [description] => apportées aux clients
     [id] => 1
 )
-UPDATE a_propos SET phone = :phone WHERE id = :id
+UPDATE stat SET description = :description WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [phone] => 06 08 76 24 68
+    [icon] => bi bi-emoji-smile
     [id] => 1
 )
-UPDATE a_propos SET phone = :phone WHERE id = :id
+UPDATE stat SET icon = :icon WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [email] => lacnathan926@gmail.commm
+    [value] => 6
     [id] => 1
 )
-UPDATE a_propos SET email = :email WHERE id = :id
+UPDATE stat SET value = :value WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [email] => lacnathan926@gmail.com
+    [title] => Solutions
     [id] => 1
 )
-UPDATE a_propos SET email = :email WHERE id = :id
+UPDATE stat SET title = :title WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur We.
+    [description] => apportées aux clients
     [id] => 1
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET description = :description WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d&amp;#039;UI/UX &amp;amp; Developpeur Web.
+    [title] => Solutions
     [id] => 1
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET title = :title WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [content_2] => Mon objectif est de concevoir des expériences utilisateur optimisées en combinant esthétique et performance.
+    [icon] => bi bi-emoji-smile
     [id] => 1
 )
-UPDATE a_propos SET content_2 = :content_2 WHERE id = :id
+UPDATE stat SET icon = :icon WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur Web.
+    [value] => 5
     [id] => 1
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET value = :value WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d&amp;#039;UI/UX &amp;amp; Developpeur Web.
+    [description] => apportées aux clients
     [id] => 1
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET description = :description WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur Web.
+    [icon] => bi bi-emoji-smile
     [id] => 1
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET icon = :icon WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d'UI/UX & Developpeur Web"fsrgsrgs".
+    [title] => Solutions
     [id] => 1
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET title = :title WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur Web&quot;fsrgsrgs&quot;.
+    [value] => 5
     [id] => 1
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET value = :value WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d&#039;UI/UX &amp; Developpeur Web.
+    [description] => apportées aux clients
     [id] => 1
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET description = :description WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: stat
 DATA: Array
 (
-    [content_1] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d&#039;UI/UX, le développement web et les nouvelles technologies.
-    [id] => 1
+    [title] => cgbxg
+    [id] => 4
 )
-UPDATE a_propos SET content_1 = :content_1 WHERE id = :id
+UPDATE stat SET title = :title WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [content_1] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologies.
-    [id] => 1
+    [value] => 2
+    [id] => 4
 )
-UPDATE a_propos SET content_1 = :content_1 WHERE id = :id
+UPDATE stat SET value = :value WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d'UI/UX & Developpeur Web.
-    [id] => 1
+    [description] => sgsgsgr
+    [id] => 4
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET description = :description WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d'UI/UX & Developpeur Web. <script>alert('XSS')</script>
-    [id] => 1
+    [icon] => bi bi-emoji-smile
+    [id] => 4
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET icon = :icon WHERE id = :id
 EXECUTE RESULT: true
-table: accueil
+table: stat
 DATA: Array
 (
-    [content] => étudiant en BTS SIO,développeur web,concepteur d'UI/UX
-    [id] => 1
+    [description] => sgsgsgr
+    [id] => 4
 )
-UPDATE accueil SET content = :content WHERE id = :id
+UPDATE stat SET description = :description WHERE id = :id
 EXECUTE RESULT: true
-table: a_propos
+table: stat
 DATA: Array
 (
-    [title_2] => Concepteur d'UI/UX & Developpeur Web.
-    [id] => 1
+    [title] => cgbxg
+    [id] => 4
 )
-UPDATE a_propos SET title_2 = :title_2 WHERE id = :id
+UPDATE stat SET title = :title WHERE id = :id
 EXECUTE RESULT: true
-table: accueil
+table: stat
 DATA: Array
 (
-    [title] => Nathan
-    [id] => 1
+    [value] => 2
+    [id] => 4
 )
-UPDATE accueil SET title = :title WHERE id = :id
+UPDATE stat SET value = :value WHERE id = :id
 EXECUTE RESULT: true
-table: accueil
+table: stat
 DATA: Array
 (
-    [title] => Nathan LAC
-    [id] => 1
+    [value] => 
+    [id] => 4
 )
-UPDATE accueil SET title = :title WHERE id = :id
+UPDATE stat SET value = :value WHERE id = :id
 EXECUTE RESULT: true
+table: stat
+DATA: Array
+(
+    [icon] => 
+    [id] => 4
+)
+UPDATE stat SET icon = :icon WHERE id = :id
+EXECUTE RESULT: true
+table: stat
+DATA: Array
+(
+    [title] => 
+    [id] => 4
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+table: stat
+DATA: Array
+(
+    [description] => 
+    [id] => 4
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: stat
+DATA: Array
+(
+    [value] => 6
+    [id] => 5
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+table: stat
+DATA: Array
+(
+    [title] => joih
+    [id] => 5
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+table: stat
+DATA: Array
+(
+    [description] => hhohh
+    [id] => 5
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+table: stat
+DELETE  FROM stat WHERE id=:id

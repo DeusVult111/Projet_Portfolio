@@ -17,13 +17,22 @@
             <span><?= htmlspecialchars($s->description) ?></span>
           </p>
           <?php if ($this->Session->isLogged()): ?>
-            <button
-              class="btn btn-warning btn-sm mt-2"
-              onclick="editStat('<?= $s->id ?>', '<?= htmlspecialchars($s->icon) ?>', '<?= htmlspecialchars($s->value) ?>', '<?= htmlspecialchars($s->title) ?>', '<?= htmlspecialchars($s->description) ?>')"
-              title="Modifier"
-            >
-              <i class="bi bi-pencil-square edit-stat-icon"></i>
-            </button>
+            <div class="btn-group mt-2 stats-btn-group" role="group">
+              <button
+                class="btn btn-warning btn-sm"
+                onclick="editStat('<?= $s->id ?>', '<?= htmlspecialchars($s->icon) ?>', '<?= htmlspecialchars($s->value) ?>', '<?= htmlspecialchars($s->title) ?>', '<?= htmlspecialchars($s->description) ?>')"
+                title="Modifier"
+              >
+                <i class="bi bi-pencil-square edit-stat-icon"></i>
+              </button>
+              <button
+                class="btn btn-danger btn-sm"
+                onclick="deleteItem('<?= $s->id ?>')"
+                title="Supprimer"
+              >
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
           <?php endif; ?>
         </div>
       <?php endforeach; ?>
@@ -34,7 +43,7 @@
           class="btn btn-outline-primary btn-sm mt-4"
           data-bs-toggle="modal"
           data-bs-target="#statsModal"
-          id="add-stat-btn"
+          id="add-Item-btn"
         >
           <i class="bi bi-plus-circle"></i> Ajouter un item
         </button>
