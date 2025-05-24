@@ -2,50 +2,13 @@
 class User extends Model {
     public $table = "users";
 
-    function authenticate($username, $password) {
-        $user = $this->findFirst(array(
-            'fields' => '*',
-            'condition' => 'username = :username',
-            'bind' => array(':username' => $username)
-        ));
-
-        if ($user && password_verify($password, $user->password)) {
-            return $user;
-        }
-        return false;
-    }
-
     function getUser($login, $password) {
         return $this->findfirst(array(
             'fields' => "*",
-            'condition' => "username='".$login."' AND password='".md5($password)."'",
+            'condition' => "username='".$login."' AND password='".hash('sha256', $password)."'",
             'limit' => 'LIMIT 1'
         ), PDO::FETCH_OBJ);
     }
-
-    public function GenererSel($id, $nom, $prenom) {
-        return $id.$nom.$prenom.$id;
-    }
-
-    public function ConcatenerMotDePasseAvecSel($password, $sel) {
-        return $sel.$password;
-    }
-
-    public function ValiderMotDePasse($password, $passwordConf) {
-        return $password === $passwordConf;
-    }
-
-    public function VerifierMotDePasse($password, $sel) {
-        $passwordAvecSel = $this->ConcatenerMotDePasseAvecSel($password, $sel);
-        return password_verify($passwordAvecSel);
-    }
-    
-    function TrouverParLogin($login) {
-        return $this->findFirst(array(
-            'fields' => '*',
-            'condition' => 'AND login = "'.$login.'"'
-        ));
-    } 
 
     function getLastInsertId() {
         $sql = "SELECT MAX(id) AS last_id FROM ". $this->table;

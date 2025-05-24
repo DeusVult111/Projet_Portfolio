@@ -140,92 +140,88 @@ document.addEventListener('DOMContentLoaded', function () {
 // Gestion de la modale d'édition des statistiques
 //---------------------------------------------------------------
 // Gestion de l'envoi du formulaire stats (création ou modification)
-document.getElementById('statsForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+const statsForm = document.getElementById('statsForm');
+if (statsForm) {
+  statsForm.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-  const id = document.getElementById('itemId').value;
-  const icon = document.getElementById('icon').value;
-  const value = document.getElementById('value').value;
-  const title = document.getElementById('title').value;
-  const description = document.getElementById('description').value;
+    const id = document.getElementById('itemId').value;
+    const icon = document.getElementById('icon').value;
+    const value = document.getElementById('value').value;
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
 
-  // Construction des paramètres pour l'appel AJAX
-  let params = [
-    id ? `id=${encodeURIComponent(id)}` : '',
-    `field=icon&value=${encodeURIComponent(icon)}&table=stat`,
-  ];
+    // Pour la création, il faut envoyer tous les champs un par un
+    const fields = [
+      { field: 'icon', value: icon },
+      { field: 'value', value: value },
+      { field: 'title', value: title },
+      { field: 'description', value: description }
+    ];
 
-  // Pour la création, il faut envoyer tous les champs un par un
-  const fields = [
-    { field: 'icon', value: icon },
-    { field: 'value', value: value },
-    { field: 'title', value: title },
-    { field: 'description', value: description }
-  ];
+    // Fonction pour envoyer chaque champ (création ou modification)
+    function sendField(field, value, callback) {
+      let body = (id ? `id=${encodeURIComponent(id)}&` : '') +
+        `field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}&table=stat`;
+      fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body
+      })
+      .then(response => response.json())
+      .then(callback)
+      .catch(error => {
+        showFlash('error', 'Erreur lors de la sauvegarde');
+      });
+    }
 
-  // Fonction pour envoyer chaque champ (création ou modification)
-  function sendField(field, value, callback) {
-    let body = (id ? `id=${encodeURIComponent(id)}&` : '') +
-      `field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}&table=stat`;
-    fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: body
-    })
-    .then(response => response.json())
-    .then(callback)
-    .catch(error => {
-      showFlash('error', 'Erreur lors de la sauvegarde');
-    });
-  }
-
-  // Si modification (id présent), on envoie chaque champ un par un
-  if (id) {
-    let done = 0;
-    fields.forEach(({ field, value }) => {
-      sendField(field, value, function(data) {
-        done++;
-        if (done === fields.length) {
-          if (data.status === 'success') {
-            showFlash('success', 'Modification réussie');
-            setTimeout(() => location.reload(), 600);
-          } else {
-            showFlash('error', data.message || 'Erreur lors de la modification');
+    // Si modification (id présent), on envoie chaque champ un par un
+    if (id) {
+      let done = 0;
+      fields.forEach(({ field, value }) => {
+        sendField(field, value, function(data) {
+          done++;
+          if (done === fields.length) {
+            if (data.status === 'success') {
+              showFlash('success', 'Modification réussie');
+              setTimeout(() => location.reload(), 600);
+            } else {
+              showFlash('error', data.message || 'Erreur lors de la modification');
+            }
           }
+        });
+      });
+    } else {
+      // Création : on envoie le premier champ, puis on récupère l'id créé et on enchaîne les autres
+      sendField('icon', icon, function(data) {
+        if (data.status === 'success') {
+          let newId = data.id; // Utilisable pour la suite
+          let restFields = fields.slice(1);
+          let done = 0;
+          restFields.forEach(({ field, value }) => {
+            let body = `id=${encodeURIComponent(newId)}&field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}&table=stat`;
+            fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: body
+            })
+            .then(response => response.json())
+            .then(function(data2) {
+              done++;
+              if (done === restFields.length) {
+                if (data2.status === 'success') {
+                  showFlash('success', 'Création réussie');
+                  setTimeout(() => location.reload(), 600);
+                } else {
+                  showFlash('error', data2.message || 'Erreur lors de la création');
+                }
+              }
+            });
+          });
+        } else {
+          showFlash('error', data.message || 'Erreur lors de la création');
         }
       });
-    });
-  } else {
-    // Création : on envoie le premier champ, puis on récupère l'id créé et on enchaîne les autres
-    sendField('icon', icon, function(data) {
-      if (data.status === 'success') {
-        // On suppose que le backend retourne l'id du nouvel item (à adapter côté PHP si besoin)
-        let newId = data.id;
-        let restFields = fields.slice(1);
-        let done = 0;
-        restFields.forEach(({ field, value }) => {
-          let body = `id=${encodeURIComponent(newId)}&field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}&table=stat`;
-          fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: body
-          })
-          .then(response => response.json())
-          .then(function(data2) {
-            done++;
-            if (done === restFields.length) {
-              if (data2.status === 'success') {
-                showFlash('success', 'Création réussie');
-                setTimeout(() => location.reload(), 600);
-              } else {
-                showFlash('error', data2.message || 'Erreur lors de la création');
-              }
-            }
-          });
-        });
-      } else {
-        showFlash('error', data.message || 'Erreur lors de la création');
-      }
-    });
-  }
-});
+    }
+  });
+}

@@ -86,8 +86,13 @@ class Portfolios extends Controller {
                     $this->Portfolio->save($data);
 
                     $msg = $id ? 'Modification réalisée avec succès' : 'Création réalisée avec succès';
+                    $newId = $id ? $id : ($this->Portfolio->id ?? null); // Récupère l'id créé si création
+
                     $this->Session->setFlash($msg, '<i class="bi bi-check-circle"></i>', 'success');
-                    echo json_encode(['status' => 'success']);
+                    echo json_encode([
+                        'status' => 'success',
+                        'id' => $newId // Ajoute l'id dans la réponse
+                    ]);
                 } catch (Exception $e) {
                     $this->Session->setFlash('Erreur : ' . $e->getMessage(), '<i class="bi bi-exclamation-circle"></i>', 'danger');
                     echo json_encode(['status' => 'error', 'message' => 'Erreur lors de la sauvegarde.']);

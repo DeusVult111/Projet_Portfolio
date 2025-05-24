@@ -5,8 +5,8 @@ class Users extends Controller {
 
     function index() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $login = htmlspecialchars($_POST['login']);
-            $password = htmlspecialchars($_POST['password']);
+            $login = $_POST['login'];
+            $password = $_POST['password'];
 
             $user = $this->User->getUser($login, $password);
 

@@ -134,4 +134,4 @@ INSERT INTO contact (title, content) VALUES
 ("Contact", "Contactez-moi ! Je vous répondrai avec plaisir.");
 
 INSERT INTO users (username, password, email) VALUES
-('admin', '$2y$10$eImiTXuWVxfM37uY4JANjQ==', 'admin@example.com');
+('admin', SHA2('admin', 256), 'admin@example.com');
