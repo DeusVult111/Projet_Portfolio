@@ -4,58 +4,8 @@ Array
 (
     [id] => 1
     [field] => title
-    [value] => Solutions
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => icon
-    [value] => bi bi-emoji-smile
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => value
-    [value] => 5
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => description
-    [value] => apportées aux clients
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => icon
-    [value] => bi bi-emoji-smile
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => value
-    [value] => 6
-    [table] => stat
+    [value] => Nathan
+    [table] => accueil
 )
 RETOUR JSON: {"status":"success","id":1}
 
@@ -64,18 +14,8 @@ Array
 (
     [id] => 1
     [field] => title
-    [value] => Solutions
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => description
-    [value] => apportées aux clients
-    [table] => stat
+    [value] => Nathan
+    [table] => accueil
 )
 RETOUR JSON: {"status":"success","id":1}
 
@@ -84,48 +24,8 @@ Array
 (
     [id] => 1
     [field] => title
-    [value] => Solutions
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => icon
-    [value] => bi bi-emoji-smile
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => value
-    [value] => 5
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => description
-    [value] => apportées aux clients
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":1}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 1
-    [field] => icon
-    [value] => bi bi-emoji-smile
-    [table] => stat
+    [value] => Nathan
+    [table] => accueil
 )
 RETOUR JSON: {"status":"success","id":1}
 
@@ -134,8 +34,8 @@ Array
 (
     [id] => 1
     [field] => title
-    [value] => Solutions
-    [table] => stat
+    [value] => Nathan
+    [table] => accueil
 )
 RETOUR JSON: {"status":"success","id":1}
 
@@ -143,9 +43,9 @@ RETOUR JSON: {"status":"success","id":1}
 Array
 (
     [id] => 1
-    [field] => value
-    [value] => 5
-    [table] => stat
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
 )
 RETOUR JSON: {"status":"success","id":1}
 
@@ -153,166 +53,80 @@ RETOUR JSON: {"status":"success","id":1}
 Array
 (
     [id] => 1
-    [field] => description
-    [value] => apportées aux clients
-    [table] => stat
+    [field] => content_1
+    [value] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologie
+    [table] => a_propos
 )
 RETOUR JSON: {"status":"success","id":1}
 
 --- NOUVELLE REQUETE ---
 Array
 (
-    [field] => icon
-    [value] => bi b-emoji-smile
-    [table] => stat
+    [id] => 1
+    [field] => content_1
+    [value] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologies.
+    [table] => a_propos
+)
+RETOUR JSON: {"status":"success","id":1}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 1
+    [field] => title_2
+    [value] => Expérience Professionnelle
+    [table] => parcours
+)
+RETOUR JSON: {"status":"success","id":1}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [title] => zeub
+    [date_range] => 5427
+    [content] => serj
+    [table] => parcours_xppro
 )
 RETOUR JSON: {"status":"success","id":"4"}
 
 --- NOUVELLE REQUETE ---
 Array
 (
-    [id] => 4
-    [field] => title
-    [value] => cgbxg
-    [table] => stat
+    [id] => 2
+    [title] => Stage - Deuxième année de BTS
+    [date_range] => janvier 2025 - 21 fevrier 2025
+    [content] => - Amélioration design de site internet client
+- 
+    [table] => parcours_xppro
 )
-RETOUR JSON: {"status":"success","id":4}
+RETOUR JSON: {"status":"success","id":2}
 
 --- NOUVELLE REQUETE ---
 Array
 (
-    [id] => 4
-    [field] => value
-    [value] => 2
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 4
-    [field] => description
-    [value] => sgsgsgr
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 4
-    [field] => icon
-    [value] => bi bi-emoji-smile
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 4
-    [field] => description
-    [value] => sgsgsgr
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 4
-    [field] => title
-    [value] => cgbxg
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 4
-    [field] => value
-    [value] => 2
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 4
-    [field] => value
-    [value] => 
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 4
-    [field] => icon
-    [value] => 
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 4
-    [field] => title
-    [value] => 
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 4
-    [field] => description
-    [value] => 
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":4}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [field] => icon
-    [value] => hjh
-    [table] => stat
+    [title] => Stage - Première année de BTS
+    [date_range] => 3 juin 2024 - 27 juin 2024
+    [content] => Création d'un site vitrine pour une association
+    [table] => parcours_xppro
 )
 RETOUR JSON: {"status":"success","id":"5"}
 
 --- NOUVELLE REQUETE ---
 Array
 (
-    [id] => 5
-    [field] => value
-    [value] => 6
-    [table] => stat
+    [title] => Stage - Deuxième année de BTS
+    [date_range] => janvier 2025 - 21 fevrier 2025
+    [content] => Amélioration design de site internet client
+    [table] => parcours_xppro
 )
-RETOUR JSON: {"status":"success","id":5}
+RETOUR JSON: {"status":"success","id":"6"}
 
 --- NOUVELLE REQUETE ---
 Array
 (
-    [id] => 5
-    [field] => title
-    [value] => joih
-    [table] => stat
+    [title] => jhfhf
+    [date_range] => yjdjyj
+    [content] => dyjdyjdtyjdyt
+    [table] => parcours_xppro
 )
-RETOUR JSON: {"status":"success","id":5}
-
---- NOUVELLE REQUETE ---
-Array
-(
-    [id] => 5
-    [field] => description
-    [value] => hhohh
-    [table] => stat
-)
-RETOUR JSON: {"status":"success","id":5}
+RETOUR JSON: {"status":"success","id":"7"}

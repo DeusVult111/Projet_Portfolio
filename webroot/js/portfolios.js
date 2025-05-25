@@ -1,12 +1,201 @@
-document.addEventListener('DOMContentLoaded', function () {
-// Sélectionne tous les éléments éditables
 
 //---------------------------------------------------------------
-// Gestion de la modale d'édition des étapes
+// Gestion ouverture de la modale 
 //---------------------------------------------------------------
-     // Initialisation des étapes à partir du span .typed
+function openModal(modalId) {
+  const modalEl = document.getElementById(modalId);
+  let modalInstance = null;
+  if (window.bootstrap && bootstrap.Modal && typeof bootstrap.Modal.getInstance === 'function') {
+    modalInstance = bootstrap.Modal.getInstance(modalEl);
+  }
+  if (!modalInstance && window.bootstrap && bootstrap.Modal) {
+    modalInstance = new bootstrap.Modal(modalEl);
+  }
+  modalInstance.show();
+}
+
+//---------------------------------------------------------------
+// Gestion stats
+//---------------------------------------------------------------
+window.editStat = function(id, icon, value, title, description) {
+  openModal('statsModal');
+  document.getElementById('itemId').value = id;
+  document.getElementById('icon').value = icon;
+  document.getElementById('value').value = value;
+  document.getElementById('title').value = title;
+  document.getElementById('description').value = description;
+};
+
+const addStatBtn = document.getElementById('add-stat-btn');
+if (addStatBtn) {
+    addStatBtn.addEventListener('click', function () {
+      document.getElementById('itemId').value = '';
+      document.getElementById('icon').value = '';
+      document.getElementById('value').value = '';
+      document.getElementById('title').value = '';
+      document.getElementById('description').value = '';
+      openModal('statsModal');
+    });
+  }
+
+window.deleteItem = function(id) {
+  if (!confirm('Voulez-vous vraiment supprimer cet item ?')) return;
+  fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeleteItem', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `id=${encodeURIComponent(id)}&table=stat`
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success') {
+      showFlash('success', 'Suppression réussie');
+      setTimeout(() => location.reload(), 600);
+    } else {
+      showFlash('error', data.message || 'Erreur lors de la suppression');
+    }
+  })
+  .catch(() => showFlash('error', 'Erreur réseau'));
+}
+
+//---------------------------------------------------------------
+// Gestion des compétences
+//---------------------------------------------------------------
+
+window.editCompetenceItem = function(id, name, value) {
+  openModal('competenceModal');
+  document.getElementById('competenceItemId').value = id;
+  document.getElementById('competenceName').value = name;
+  document.getElementById('competenceValue').value = value;
+};
+
+const addCompetenceBtn = document.getElementById('add-competence-btn');
+if (addCompetenceBtn) {
+  addCompetenceBtn.addEventListener('click', function () {
+    document.getElementById('competenceItemId').value = '';
+    document.getElementById('competenceName').value = '';
+    document.getElementById('competenceValue').value = '';
+    openModal('competenceModal');
+  });
+}
+window.deleteCompetenceItem = function(id) {
+  if (!confirm('Voulez-vous vraiment supprimer cette compétence ?')) return;
+  fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeleteItem', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `id=${encodeURIComponent(id)}&table=competences_item`
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success') {
+      showFlash('success', 'Suppression réussie');
+      setTimeout(() => location.reload(), 600);
+    } else {
+      showFlash('error', data.message || 'Erreur lors de la suppression');
+    }
+  })
+  .catch(() => showFlash('error', 'Erreur réseau'));
+}
+
+//---------------------------------------------------------------
+// Gestion des boutons "supprimer" de parcours de formation et expérience professionnelle
+//---------------------------------------------------------------
+// Ouvre la modale pour édition/ajout formation
+window.deleteParcoursFormation = function(id) {
+  if (!confirm('Voulez-vous vraiment supprimer cette formation ?')) return;
+  fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeleteItem', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `id=${encodeURIComponent(id)}&table=parcours_formation`
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success') {
+      showFlash('success', 'Suppression réussie');
+      setTimeout(() => location.reload(), 600);
+    } else {
+      showFlash('error', data.message || 'Erreur lors de la suppression');
+    }
+  })
+  .catch(() => showFlash('error', 'Erreur réseau'));
+};
+window.deleteParcoursXppro = function(id) {
+  if (!confirm('Voulez-vous vraiment supprimer cette expérience ?')) return;
+  fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeleteItem', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `id=${encodeURIComponent(id)}&table=parcours_xppro`
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success') {
+      showFlash('success', 'Suppression réussie');
+      setTimeout(() => location.reload(), 600);
+    } else {
+      showFlash('error', data.message || 'Erreur lors de la suppression');
+    }
+  })
+  .catch(() => showFlash('error', 'Erreur réseau'));
+};
+document.addEventListener('DOMContentLoaded', function () {
+
+//---------------------------------------------------------------
+// Gestion édition inline (contenteditable)
+//---------------------------------------------------------------
+  // Sélectionne tous les éléments éditables inline
+  document.querySelectorAll('[contenteditable][data-field][data-id][data-table]').forEach(function (el) {
+    // Sauvegarde la valeur initiale
+    el.dataset.oldValue = el.innerText;
+
+    // Sauvegarde au blur ou sur Entrée
+    function saveInlineEdit(e) {
+      // Sur Enter, empêche le retour à la ligne
+      if (e.type === 'keydown' && e.key !== 'Enter') return;
+      if (e.type === 'keydown') e.preventDefault();
+
+      const value = el.innerText.trim();
+      const oldValue = el.dataset.oldValue;
+      if (value === oldValue) return; // Rien à faire
+
+      el.dataset.oldValue = value; // Met à jour la valeur initiale
+
+      const id = el.getAttribute('data-id');
+      const field = el.getAttribute('data-field');
+      const table = el.getAttribute('data-table');
+
+      fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `id=${encodeURIComponent(id)}&field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}&table=${encodeURIComponent(table)}`
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          showFlash('success', 'Modification enregistrée');
+        } else {
+          showFlash('error', data.message || 'Erreur lors de la modification');
+        }
+      })
+      .catch(() => showFlash('error', 'Erreur réseau'));
+    }
+
+    // Sauvegarde au blur
+    el.addEventListener('blur', saveInlineEdit);
+
+    // Sauvegarde sur Entrée
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        saveInlineEdit(e);
+        el.blur();
+      }
+    });
+  });
+//---------------------------------------------------------------
+// Gestion de la modale d'édition des étapes (Accueil)
+//---------------------------------------------------------------
+const typedSpan = document.querySelector('.typed[data-typed-items]');
+if (typedSpan) {
+  // Initialisation des étapes à partir du span .typed
     const typedSpan = document.querySelector('.typed[data-typed-items]');
-    if (!typedSpan) return;
 
     let steps = typedSpan.getAttribute('data-typed-items').split(',').map(s => s.trim());
 
@@ -32,6 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let dbSteps = editBtn.getAttribute('data-steps') || '';
         steps = dbSteps.split(',').map(s => s.trim());
         renderSteps();
+        openModal('editAccueilContentModal'); // Ouvre la modale proprement
       });
     }
 
@@ -97,95 +287,12 @@ document.addEventListener('DOMContentLoaded', function () {
     })
       .catch(() => showFlash('error', 'Erreur réseau'));
     });
-    
-//---------------------------------------------------------------
-// Gestion de l'édition inline
-//---------------------------------------------------------------
-    // Sélectionne tous les éléments avec contenteditable, data-field, data-id
-    const editables = document.querySelectorAll('[contenteditable][data-field][data-id]');
-
-    editables.forEach(function (el) {
-      el.addEventListener('blur', function () {
-        const field = el.getAttribute('data-field');
-        const id = el.getAttribute('data-id');
-        const table = el.getAttribute('data-table');
-        const value = el.textContent.trim();
-
-        if (!field || !id || !table) {
-          console.error('Données invalides');
-          return;
-        }
-
-        fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: `id=${encodeURIComponent(id)}&field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}&table=${encodeURIComponent(table)}`
-        })
-        .then(response => response.json())
-        .then(data => {
-          if (data.status === 'success') {
-            console.log('Mise à jour réussie');
-          } else {
-            console.error('Erreur : ' + data.message);
-          }
-        })
-        .catch(error => {
-          console.error('Erreur réseau', error);
-        });
-      });
-    });
-});
+}
 
 //---------------------------------------------------------------
 // Gestion de la modale d'édition des statistiques
 //---------------------------------------------------------------
-function editStat(id, icon, value, title, description) {
-  // Ouvre la modale
-  const modal = new bootstrap.Modal(document.getElementById('statsModal'));
-  modal.show();
 
-  // Remplit les champs du formulaire
-  document.getElementById('itemId').value = id;
-  document.getElementById('icon').value = icon;
-  document.getElementById('value').value = value;
-  document.getElementById('title').value = title;
-  document.getElementById('description').value = description;
-}
-
-// Gestion du bouton "Ajouter un item" pour stats
-const addStatBtn = document.getElementById('add-stat-btn');
-if (addStatBtn) {
-  addStatBtn.addEventListener('click', function () {
-    // Vide les champs du formulaire
-    document.getElementById('itemId').value = '';
-    document.getElementById('icon').value = '';
-    document.getElementById('value').value = '';
-    document.getElementById('title').value = '';
-    document.getElementById('description').value = '';
-    // Ouvre la modale
-    const modal = new bootstrap.Modal(document.getElementById('statsModal'));
-    modal.show();
-  });
-}
-
-function deleteItem(id) {
-  if (!confirm('Voulez-vous vraiment supprimer cet item ?')) return;
-  fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeleteItem', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: `id=${encodeURIComponent(id)}&table=stat`
-  })
-  .then(response => response.json())
-  .then(data => {
-    if (data.status === 'success') {
-      showFlash('success', 'Suppression réussie');
-      setTimeout(() => location.reload(), 600);
-    } else {
-      showFlash('error', data.message || 'Erreur lors de la suppression');
-    }
-  })
-  .catch(() => showFlash('error', 'Erreur réseau'));
-}
 
 // Gestion de l'envoi du formulaire stats (création ou modification)
 const statsForm = document.getElementById('statsForm');
@@ -199,7 +306,6 @@ if (statsForm) {
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
 
-    // Pour la création, il faut envoyer tous les champs un par un
     const fields = [
       { field: 'icon', value: icon },
       { field: 'value', value: value },
@@ -207,7 +313,6 @@ if (statsForm) {
       { field: 'description', value: description }
     ];
 
-    // Fonction pour envoyer chaque champ (création ou modification)
     function sendField(field, value, callback) {
       let body = (id ? `id=${encodeURIComponent(id)}&` : '') +
         `field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}&table=stat`;
@@ -223,7 +328,7 @@ if (statsForm) {
       });
     }
 
-    // Si modification (id présent), on envoie chaque champ un par un
+    // Ici commence la logique d'envoi (modification/création)
     if (id) {
       let done = 0;
       fields.forEach(({ field, value }) => {
@@ -272,47 +377,11 @@ if (statsForm) {
       });
     }
   });
+}
 
 //---------------------------------------------------------------
 // Gestion de la modale d'édition des compétences
 //---------------------------------------------------------------
-  function editCompetenceItem(id, name, value) {
-  const modal = new bootstrap.Modal(document.getElementById('competenceModal'));
-  modal.show();
-  document.getElementById('competenceItemId').value = id;
-  document.getElementById('competenceName').value = name;
-  document.getElementById('competenceValue').value = value;
-  }
-
-  const addCompetenceBtn = document.getElementById('add-competence-btn');
-  if (addCompetenceBtn) {
-    addCompetenceBtn.addEventListener('click', function () {
-      document.getElementById('competenceItemId').value = '';
-      document.getElementById('competenceName').value = '';
-      document.getElementById('competenceValue').value = '';
-      const modal = new bootstrap.Modal(document.getElementById('competenceModal'));
-      modal.show();
-    });
-  }
-
-  function deleteCompetenceItem(id) {
-    if (!confirm('Voulez-vous vraiment supprimer cette compétence ?')) return;
-    fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeleteItem', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `id=${encodeURIComponent(id)}&table=competences_item`
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'success') {
-        showFlash('success', 'Suppression réussie');
-        setTimeout(() => location.reload(), 600);
-      } else {
-        showFlash('error', data.message || 'Erreur lors de la suppression');
-      }
-    })
-    .catch(() => showFlash('error', 'Erreur réseau'));
-  }
 
   const competenceForm = document.getElementById('competenceForm');
   if (competenceForm) {
@@ -322,14 +391,11 @@ if (statsForm) {
       const name = document.getElementById('competenceName').value;
       const value = document.getElementById('competenceValue').value;
 
-      const fields = [
-        { field: 'name', value: name },
-        { field: 'value', value: value }
-      ];
-
-      function sendField(field, value, callback) {
-        let body = (id ? `id=${encodeURIComponent(id)}&` : '') +
-          `field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}&table=competences_item`;
+      function sendFields(data, callback) {
+        let body = Object.entries(data)
+          .map(([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`)
+          .join('&');
+        body += '&table=competences_item';
         fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -337,38 +403,27 @@ if (statsForm) {
         })
         .then(response => response.json())
         .then(callback)
-        .catch(error => {
+        .catch(() => {
           showFlash('error', 'Erreur lors de la sauvegarde');
         });
       }
 
       if (id) {
-        let done = 0;
-        fields.forEach(({ field, value }) => {
-          sendField(field, value, function(data) {
-            done++;
-            if (done === fields.length) {
-              if (data.status === 'success') {
-                showFlash('success', 'Modification réussie');
-                setTimeout(() => location.reload(), 600);
-              } else {
-                showFlash('error', data.message || 'Erreur lors de la modification');
-              }
-            }
-          });
+        // Modification : envoie les deux champs en une seule fois
+        sendFields({ id, name, value }, function(data) {
+          if (data.status === 'success') {
+            showFlash('success', 'Modification réussie');
+            setTimeout(() => location.reload(), 100);
+          } else {
+            showFlash('error', data.message || 'Erreur lors de la modification');
+          }
         });
       } else {
-        sendField('name', name, function(data) {
+        // Création : envoie les deux champs en une seule fois
+        sendFields({ name, value }, function(data) {
           if (data.status === 'success') {
-            let newId = data.id;
-            sendField('value', value, function(data2) {
-              if (data2.status === 'success') {
-                showFlash('success', 'Création réussie');
-                setTimeout(() => location.reload(), 600);
-              } else {
-                showFlash('error', data2.message || 'Erreur lors de la création');
-              }
-            });
+            showFlash('success', 'Création réussie');
+            setTimeout(() => location.reload(), 100);
           } else {
             showFlash('error', data.message || 'Erreur lors de la création');
           }
@@ -376,5 +431,103 @@ if (statsForm) {
       }
     });
   }
+
+  // Boutons d'ajout
+document.getElementById('add-parcours-formation-btn')?.addEventListener('click', function() {
+  document.getElementById('parcoursItemId').value = '';
+  document.getElementById('parcoursTitle').value = '';
+  document.getElementById('parcoursDate').value = '';
+  document.getElementById('parcoursContent').value = '';
+  document.getElementById('parcoursTable').value = 'parcours_formation';
+  openModal('parcoursModal');
+});
+document.getElementById('add-parcours-xppro-btn')?.addEventListener('click', function() {
+  document.getElementById('parcoursItemId').value = '';
+  document.getElementById('parcoursTitle').value = '';
+  document.getElementById('parcoursDate').value = '';
+  document.getElementById('parcoursContent').value = '';
+  document.getElementById('parcoursTable').value = 'parcours_xppro';
+  openModal('parcoursModal');
+});
+
+//---------------------------------------------------------------
+// Gestion de la modale d'édition des parcours de formation et expérience professionnelle
+//---------------------------------------------------------------
+// Gestion du submit
+const parcoursForm = document.getElementById('parcoursForm');
+if (parcoursForm) {
+  parcoursForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const id = document.getElementById('parcoursItemId').value;
+    const title = document.getElementById('parcoursTitle').value;
+    const date_range = document.getElementById('parcoursDate').value;
+    const content = document.getElementById('parcoursContent').value;
+    const table = document.getElementById('parcoursTable').value;
+
+    function sendFields(data, callback) {
+      let body = Object.entries(data)
+        .map(([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`)
+        .join('&');
+      body += `&table=${encodeURIComponent(table)}`;
+      fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body
+      })
+      .then(response => response.json())
+      .then(callback)
+      .catch(() => {
+        showFlash('error', 'Erreur lors de la sauvegarde');
+      });
+    }
+
+    if (id) {
+      sendFields({ id, title, date_range, content }, function(data) {
+        if (data.status === 'success') {
+          showFlash('success', 'Modification réussie');
+          setTimeout(() => location.reload(), 100);
+        } else {
+          showFlash('error', data.message || 'Erreur lors de la modification');
+        }
+      });
+    } else {
+      sendFields({ title, date_range, content }, function(data) {
+        if (data.status === 'success') {
+          showFlash('success', 'Création réussie');
+          setTimeout(() => location.reload(), 100);
+        } else {
+          showFlash('error', data.message || 'Erreur lors de la création');
+        }
+      });
+    }
+  });
 }
 
+//---------------------------------------------------------------
+// Gestion des boutons "Modifier" pour parcours de formation et expérience professionnelle
+//---------------------------------------------------------------
+// Gestion des boutons "Modifier" pour expérience pro
+document.querySelectorAll('.edit-xppro-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.getElementById('parcoursItemId').value = btn.dataset.id;
+    document.getElementById('parcoursTitle').value = btn.dataset.title;
+    document.getElementById('parcoursDate').value = btn.dataset.date_range;
+    document.getElementById('parcoursContent').value = btn.dataset.content;
+    document.getElementById('parcoursTable').value = 'parcours_xppro';
+    openModal('parcoursModal');
+  });
+});
+
+// Gestion des boutons "Modifier" pour formation
+document.querySelectorAll('.edit-formation-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.getElementById('parcoursItemId').value = btn.dataset.id;
+    document.getElementById('parcoursTitle').value = btn.dataset.title;
+    document.getElementById('parcoursDate').value = btn.dataset.date_range;
+    document.getElementById('parcoursContent').value = btn.dataset.content;
+    document.getElementById('parcoursTable').value = 'parcours_formation';
+    openModal('parcoursModal');
+  });
+});
+
+});

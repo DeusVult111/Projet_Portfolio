@@ -1,127 +1,126 @@
 <!-- parcours Section -->
 <section id="parcours" class="parcours section">
-  <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="6" data-table="parcours"'; ?>>
+    <h2 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="'.$parcours[0]->id.'" data-table="parcours"'; ?>>
       <?= htmlspecialchars($parcours[0]->title) ?>
     </h2>
-    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="6" data-table="parcours"'; ?>>
+    <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="'.$parcours[0]->id.'" data-table="parcours"'; ?>>
       <?= htmlspecialchars($parcours[0]->content) ?>
     </p>
-  </div><!-- End Section Title -->
+  </div>
   <div class="container">
     <div class="row">
+      <!-- Formation -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="parcours-title">Formation</h3>
-        <div class="parcours-item">
-          <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="7" data-table="parcours"'; ?>>
-            Bac Général - Classe de Première
-          </h4>
-          <h5 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="date" data-id="7" data-table="parcours"'; ?>>
-            2021 - 2022
-          </h5>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="7" data-table="parcours"'; ?>>
-            <em>Lycée Général et technologique Simone Weil, 43000, Le Puy-en-Velay</em>
-          </p>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="7" data-table="parcours"'; ?>>
-            Spécialité : Mathématique, Numerique et Science Informatique, Physique
-          </p>
-        </div><!-- Edn parcours Item -->
-        <div class="parcours-item">
-          <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="8" data-table="parcours"'; ?>>
-            Bac Général - Classe de Terminale
-          </h4>
-          <h5 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="date" data-id="8" data-table="parcours"'; ?>>
-            2022 - 2023
-          </h5>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="8" data-table="parcours"'; ?>>
-            <em>Lycée Général et technologique Simone Weil, 43000, Le Puy-en-Velay</em>
-          </p>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="8" data-table="parcours"'; ?>>
-            Spécialité : Mathématique, Numerique et Science Informatique
-          </p>
-        </div><!-- Edn parcours Item -->
-        <div class="parcours-item">
-          <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="9" data-table="parcours"'; ?>>
-            BTS - Service Informatique aux Organisations <br><em>Première année</em>
-          </h4>
-          <h5 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="date" data-id="9" data-table="parcours"'; ?>>
-            2023 - 2024
-          </h5>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="9" data-table="parcours"'; ?>>
-            <em>Pôle La Chartreuse, 43700, Brive-Charensac</em>
-          </p>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="9" data-table="parcours"'; ?>>
-            Option : Solutions Logicielles et Applications Metiers (deuxième semèstres)
-          </p>
-        </div><!-- Edn parcours Item -->
-        <div class="parcours-item">
-          <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="10" data-table="parcours"'; ?>>
-            BTS - Service Informatique aux Organisations <br><em>Deuxième année</em>
-          </h4>
-          <h5 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="date" data-id="10" data-table="parcours"'; ?>>
-            2024 - 2025
-          </h5>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="10" data-table="parcours"'; ?>>
-            <em>Pôle La Chartreuse, 43700, Brive-Charensac</em>
-          </p>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="10" data-table="parcours"'; ?>>
-            Option : Solutions Logicielles et Applications Métiers
-          </p>
-        </div><!-- Edn parcours Item -->
+        <h3 class="parcours-title"
+          <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title_1" data-id="1" data-table="parcours"'; ?>>
+          <?= htmlspecialchars($parcours[0]->title_1) ?>
+        </h3>
+        <?php foreach ($parcours_formation as $item): ?>
+          <div class="parcours-item">
+            <h4><?= htmlspecialchars($item->title) ?></h4>
+            <h5><?= htmlspecialchars($item->date_range) ?></h5>
+            <p><?= nl2br(htmlspecialchars($item->content)) ?></p>
+            <?php if ($this->Session->isLogged()): ?>
+              <div class="btn-group mt-2 parcours-btn-group" role="group">
+                <button
+                  class="btn btn-warning btn-sm edit-formation-btn"
+                  data-id="<?= htmlspecialchars($item->id) ?>"
+                  data-title="<?= htmlspecialchars($item->title, ENT_QUOTES) ?>"
+                  data-date_range="<?= htmlspecialchars($item->date_range, ENT_QUOTES) ?>"
+                  data-content="<?= htmlspecialchars($item->content, ENT_QUOTES) ?>"
+                  title="Modifier">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button class="btn btn-danger btn-sm"
+                  onclick="deleteParcoursFormation('<?= $item->id ?>')"
+                  title="Supprimer">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            <?php endif; ?>
+          </div>
+        <?php endforeach; ?>
+        <?php if ($this->Session->isLogged()): ?>
+          <div class="text-center">
+            <button class="btn btn-outline-primary add-Item-btn btn-sm mt-4" id="add-parcours-formation-btn">
+              <i class="bi bi-plus-circle"></i> Ajouter une formation
+            </button>
+          </div>
+        <?php endif; ?>
       </div>
-
+      <!-- Experience Professionnelle -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="parcours-title">Experience Professionnelle</h3>
-        <div class="parcours-item">
-          <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="11" data-table="parcours"'; ?>>
-            Stage - Première année de BTS
-          </h4>
-          <h5 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="date" data-id="11" data-table="parcours"'; ?>>
-            3 juin 2024 - 27 juin 2024
-          </h5>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="11" data-table="parcours"'; ?>>
-            <em>            Télétravail, Nacre Informatique</em>
-          </p>
-          <ul>
-            <li <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="11" data-table="parcours"'; ?>>
-              Création d'un site vitrine pour une association
-            </li>
-          </ul>
-        </div><!-- Edn parcours Item -->
-
-        <div class="parcours-item">
-          <h4 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title" data-id="12" data-table="parcours"'; ?>>
-            Stage - Deuxième année de BTS
-          </h4>
-          <h5 <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="date" data-id="12" data-table="parcours"'; ?>>
-            janvier 2025 - 21 fevrier 2025
-          </h5>
-          <p <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="12" data-table="parcours"'; ?>>
-            <em>Télétravail, 3dfi.net</em>
-          </p>
-          <ul>
-            <li <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="12" data-table="parcours"'; ?>>
-              Amélioration design de site internet client
-            </li>
-            <li <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="12" data-table="parcours"'; ?>>
-              Remplissage de site internet client
-            </li>
-            <li <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="12" data-table="parcours"'; ?>>
-              Correction de bugs
-            </li>
-            <li <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="12" data-table="parcours"'; ?>>
-              Conception d'une maquette de site internet
-            </li>
-            <li <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="12" data-table="parcours"'; ?>>
-              Montage Video / Photo
-            </li>
-            <li <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="content" data-id="12" data-table="parcours"'; ?>>
-              Ecoute du client et solutions apportées en conséquence
-            </li>
-          </ul>
-        </div><!-- Edn parcours Item -->
+        <h3 class="parcours-title"
+          <?php if ($this->Session->isLogged()) echo 'contenteditable="true" data-field="title_2" data-id="1" data-table="parcours"'; ?>>
+          <?= htmlspecialchars($parcours[0]->title_2) ?>
+        </h3>
+        <?php foreach ($parcours_xppro as $item): ?>
+          <div class="parcours-item">
+            <h4><?= htmlspecialchars($item->title) ?></h4>
+            <h5><?= htmlspecialchars($item->date_range) ?></h5>
+            <p><?= nl2br(htmlspecialchars($item->content)) ?></p>
+            <?php if ($this->Session->isLogged()): ?>
+              <div class="btn-group mt-2 parcours-btn-group" role="group">
+                <button
+                  class="btn btn-warning btn-sm edit-xppro-btn"
+                  data-id="<?= htmlspecialchars($item->id) ?>"
+                  data-title="<?= htmlspecialchars($item->title, ENT_QUOTES) ?>"
+                  data-date_range="<?= htmlspecialchars($item->date_range, ENT_QUOTES) ?>"
+                  data-content="<?= htmlspecialchars($item->content, ENT_QUOTES) ?>"
+                  title="Modifier">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button class="btn btn-danger btn-sm"
+                  onclick="deleteParcoursXppro('<?= $item->id ?>')"
+                  title="Supprimer">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+            <?php endif; ?>
+          </div>
+        <?php endforeach; ?>
+        <?php if ($this->Session->isLogged()): ?>
+          <div class="text-center">
+            <button class="btn btn-outline-primary add-Item-btn btn-sm mt-4" id="add-parcours-xppro-btn">
+              <i class="bi bi-plus-circle"></i> Ajouter une expérience
+            </button>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
-</section><!-- /parcours Section -->
+
+  <!-- Modal pour Ajouter/Modifier un parcours -->
+  <div class="modal fade" id="parcoursModal" tabindex="-1" aria-labelledby="parcoursModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="parcoursForm">
+          <div class="modal-header">
+            <h5 class="modal-title" id="parcoursModalLabel">Ajouter / Modifier un parcours</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="parcoursItemId" name="id">
+            <input type="hidden" id="parcoursTable" name="table">
+            <div class="mb-3">
+              <label for="parcoursTitle" class="form-label">Titre</label>
+              <input type="text" class="form-control" id="parcoursTitle" name="title" required>
+            </div>
+            <div class="mb-3">
+              <label for="parcoursDate" class="form-label">Date</label>
+              <input type="text" class="form-control" id="parcoursDate" name="date_range" required>
+            </div>
+            <div class="mb-3">
+              <label for="parcoursContent" class="form-label">Description</label>
+              <textarea class="form-control" id="parcoursContent" name="content" rows="3" required></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-warning"><i class="bi bi-floppy-fill"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

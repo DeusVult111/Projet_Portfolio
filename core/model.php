@@ -141,6 +141,7 @@ class model {
                 $sql = "UPDATE " . $this->table . " SET $fields WHERE id = :id";
 
                 // Ajout de la requête préparée pour le débogage
+                file_put_contents('debug_sql.txt', "\n--- NOUVELLE REQUETE ---\n", FILE_APPEND);
                 file_put_contents('debug_sql.txt', "table: " . $this->table . "\n", FILE_APPEND);
                 file_put_contents('debug_sql.txt', "DATA: " . print_r($data, true), FILE_APPEND);
                 file_put_contents('debug_sql.txt', $sql . PHP_EOL, FILE_APPEND);

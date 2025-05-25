@@ -9,4 +9,3 @@ require 'portfolio.php';
 require 'savoir_faire.php';
 require 'contact.php';
 ?>
-<script src="/<?= WEBROOT2 ?>/webroot/js/portfolios.js"></script>

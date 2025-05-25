@@ -59,9 +59,26 @@ CREATE TABLE IF NOT EXISTS competences_item (
 -- Table pour la section parcours
 CREATE TABLE IF NOT EXISTS parcours (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,         
+    content TEXT NOT NULL,              
+    title_1 VARCHAR(255) NOT NULL,  
+    title_2 VARCHAR(255) NOT NULL        
+) ENGINE=InnoDB;
+
+-- Table pour les formation de parcours
+CREATE TABLE IF NOT EXISTS parcours_formation (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
-    date_range VARCHAR(50) NOT NULL
+    date_range VARCHAR(50)
+) ENGINE=InnoDB;
+
+-- Table pour les experiences pro de parcours
+CREATE TABLE IF NOT EXISTS parcours_xppro (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    date_range VARCHAR(50)
 ) ENGINE=InnoDB;
 
 -- Table pour la section portfolio
@@ -124,11 +141,20 @@ INSERT INTO competences_item (name, value) VALUES
 ('Github', 80);
 
 -- Insertion des données dans la table parcours
-INSERT INTO parcours (title, content, date_range) VALUES
+INSERT INTO parcours (title, content, title_1, title_2) VALUES
+('Parcours', "De ma découverte de l\'informatique au lycée à mon BTS.", 'Formation', 'Experience Professionnelle');
+
+-- Insertion des données dans la table parcours_formation
+INSERT INTO parcours_formation (title, content, date_range) VALUES
 ("Bac Général - Classe de Première", "Spécialité : Mathématique, Numérique et Science Informatique, Physique", "2021 - 2022"),
 ("Bac Général - Classe de Terminale", "Spécialité : Mathématique, Numérique et Science Informatique", "2022 - 2023"),
 ("BTS - Service Informatique aux Organisations Première année", "Option : Solutions Logicielles et Applications Métiers (deuxième semestre)", "2023 - 2024"),
 ("BTS - Service Informatique aux Organisations Deuxième année", "Option : Solutions Logicielles et Applications Métiers", "2024 - 2025");
+
+-- Insertion des données dans la table parcours_xppro
+INSERT INTO parcours_xppro (title, content, date_range) VALUES
+("Stage - Première année de BTS", "Création d'un site vitrine pour une association", "3 juin 2024 - 27 juin 2024"),
+("Stage - Deuxième année de BTS", "Amélioration design de site internet client", "janvier 2025 - 21 fevrier 2025");
 
 -- Insertion des données dans la table portfolio
 INSERT INTO portfolio (title, content, technology, year, model, link) VALUES

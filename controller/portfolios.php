@@ -25,6 +25,12 @@ class Portfolios extends Controller {
         $this->Portfolio->setTable('parcours');
         $d['parcours'] = $this->Portfolio->getSections();
 
+        $this->Portfolio->setTable('parcours_formation');
+        $d['parcours_formation'] = $this->Portfolio->getSections();
+
+        $this->Portfolio->setTable('parcours_xppro');
+        $d['parcours_xppro'] = $this->Portfolio->getSections();
+
         $this->Portfolio->setTable('portfolio');
         $d['portfolio'] = $this->Portfolio->getSections();
 
@@ -49,13 +55,11 @@ class Portfolios extends Controller {
     function ajaxUpdateField() {
         file_put_contents('debug_ajax.txt', "\n--- NOUVELLE REQUETE ---\n", FILE_APPEND);
         file_put_contents('debug_ajax.txt', print_r($_POST, true), FILE_APPEND);
-        if ($this->Session->isLogged() && !empty($_POST['field']) && isset($_POST['value']) && !empty($_POST['table'])) {
+        if ($this->Session->isLogged() && !empty($_POST['table'])) {
             $id = !empty($_POST['id']) ? intval($_POST['id']) : null;
-            $field = $_POST['field'];
-            $value = $_POST['value'];
             $table = $_POST['table'];
-
             $this->Portfolio->setTable($table);
+            
             // Champs valides pour une section
             $validFields = [
                 // accueil
@@ -71,8 +75,13 @@ class Portfolios extends Controller {
                 // competences
                 // (déjà inclus: title, content)
 
+                // competences_item
+                'name',
+
                 // parcours
                 'date_range',
+                // parcours_formation et parcours_xppro
+'               title', 'date_range', 'content',
 
                 // portfolio
                 'technology', 'year', 'model', 'link',
@@ -83,24 +92,37 @@ class Portfolios extends Controller {
                 // contact
                 // (déjà inclus: title, content)
             ];
-            if (in_array($field, $validFields)) {
-                try {
-                    $data = [$field => $value];
-                    if ($id) $data['id'] = $id;
-                    $this->Portfolio->save($data);
 
+            $data = [];
+
+            // Cas édition inline (field + value)
+            if (isset($_POST['field']) && isset($_POST['value']) && in_array($_POST['field'], $validFields)) {
+                $data[$_POST['field']] = $_POST['value'];
+            } else {
+                // Cas formulaire complet (plusieurs champs)
+                foreach ($validFields as $field) {
+                    if (isset($_POST[$field])) {
+                        $data[$field] = $_POST[$field];
+                    }
+                }
+            }
+            if ($id) $data['id'] = $id;
+
+            if (!empty($data)) {
+                try {
+                    $this->Portfolio->save($data);
                     $msg = $id ? 'Modification réalisée avec succès' : 'Création réalisée avec succès';
-                    $newId = $id ? $id : ($this->Portfolio->id ?? null); // Récupère l'id créé si création
+                    $newId = $id ? $id : ($this->Portfolio->id ?? null);
 
                     file_put_contents('debug_ajax.txt', "RETOUR JSON: " . json_encode([
                         'status' => 'success',
                         'id' => $newId
-                    ]) . "\n", FILE_APPEND); 
+                    ]) . "\n", FILE_APPEND);
 
                     $this->Session->setFlash($msg, '<i class="bi bi-check-circle"></i>', 'success');
                     echo json_encode([
                         'status' => 'success',
-                        'id' => $newId // Ajoute l'id dans la réponse
+                        'id' => $newId
                     ]);
                 } catch (Exception $e) {
                     $this->Session->setFlash('Erreur : ' . $e->getMessage(), '<i class="bi bi-exclamation-circle"></i>', 'danger');
@@ -110,12 +132,10 @@ class Portfolios extends Controller {
                 $this->Session->setFlash('Champ invalide.', '<i class="bi bi-exclamation-circle"></i>', 'danger');
                 echo json_encode(['status' => 'error', 'message' => 'Champ invalide']);
             }
-        } else {
-            $this->Session->setFlash('Données invalides.', '<i class="bi bi-exclamation-circle"></i>', 'danger');
-            echo json_encode(['status' => 'error', 'message' => 'Données invalides']);
+            die();
         }
-        die();
     }
+        
 
     public function ajaxDeleteItem() {
         if ($this->Session->isLogged() && !empty($_POST['id']) && !empty($_POST['table'])) {

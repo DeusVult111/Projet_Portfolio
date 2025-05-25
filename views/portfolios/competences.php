@@ -26,32 +26,32 @@
                   style="width: <?= (int)$item->value ?>%;">
               </div>
             </div>
-            <?php if ($this->Session->isLogged()): ?>
-              <div class="btn-group mt-2 competences-btn-group" role="group">
-                <button class="btn btn-warning btn-sm"
-                  onclick="editCompetenceItem('<?= $item->id ?>', '<?= htmlspecialchars($item->name) ?>', '<?= (int)$item->value ?>')"
-                  title="Modifier">
-                  <i class="bi bi-pencil-square"></i>
-                </button>
-                <button class="btn btn-danger btn-sm"
-                  onclick="deleteCompetenceItem('<?= $item->id ?>')"
-                  title="Supprimer">
-                  <i class="bi bi-trash"></i>
-                </button>
-              </div>
-            <?php endif; ?>
           </div>
+          <?php if ($this->Session->isLogged()): ?>
+            <div class="btn-group mt-2 competences-btn-group" role="group">
+              <button class="btn btn-warning btn-sm"
+                onclick="editCompetenceItem('<?= $item->id ?>', '<?= htmlspecialchars($item->name) ?>', '<?= (int)$item->value ?>')"
+                title="Modifier">
+                <i class="bi bi-pencil-square"></i>
+              </button>
+              <button class="btn btn-danger btn-sm"
+                onclick="deleteCompetenceItem('<?= $item->id ?>')"
+                title="Supprimer">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
+          <?php endif; ?>
         </div>
       <?php endforeach; ?>
       </div>
       <?php if ($this->Session->isLogged()): ?>
         <div class="text-center">
-          <button class="btn btn-outline-primary btn-sm mt-4" id="add-competence-btn">
+          <button class="btn btn-outline-primary add-Item-btn btn-sm mt-4" id="add-competence-btn">
             <i class="bi bi-plus-circle"></i> Ajouter une compétence
           </button>
         </div>
       <?php endif; ?>
-
+  </div>
       <!-- Modal pour Ajouter/Modifier une compétence -->
       <div class="modal fade" id="competenceModal" tabindex="-1" aria-labelledby="competenceModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-    </div>
+    
     <div class="logos overflow-hidden py-5 px-0 position-relative" style="white-space: nowrap;">
       <div class="logos-slide d-inline-block">
         <img src="webroot/img/logo_language/html-5-svgrepo-com.svg" alt="Logo 1">

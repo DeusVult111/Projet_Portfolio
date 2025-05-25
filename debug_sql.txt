@@ -1,258 +1,82 @@
-table: stat
+--- NOUVELLE REQUETE ---
+table: a_propos
 DATA: Array
 (
-    [title] => Solutions
+    [content_1] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologie
     [id] => 1
 )
-UPDATE stat SET title = :title WHERE id = :id
+UPDATE a_propos SET content_1 = :content_1 WHERE id = :id
 EXECUTE RESULT: true
-table: stat
+
+--- NOUVELLE REQUETE ---
+table: a_propos
 DATA: Array
 (
-    [icon] => bi bi-emoji-smile
+    [content_1] => Étudiant en deuxième année de BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je suis passionné par le design d'UI/UX, le développement web et les nouvelles technologies.
     [id] => 1
 )
-UPDATE stat SET icon = :icon WHERE id = :id
+UPDATE a_propos SET content_1 = :content_1 WHERE id = :id
 EXECUTE RESULT: true
-table: stat
+
+--- NOUVELLE REQUETE ---
+table: parcours
 DATA: Array
 (
-    [value] => 5
+    [title_2] => Expérience Professionnelle
     [id] => 1
 )
-UPDATE stat SET value = :value WHERE id = :id
+UPDATE parcours SET title_2 = :title_2 WHERE id = :id
 EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [description] => apportées aux clients
-    [id] => 1
-)
-UPDATE stat SET description = :description WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [icon] => bi bi-emoji-smile
-    [id] => 1
-)
-UPDATE stat SET icon = :icon WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [value] => 6
-    [id] => 1
-)
-UPDATE stat SET value = :value WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [title] => Solutions
-    [id] => 1
-)
-UPDATE stat SET title = :title WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [description] => apportées aux clients
-    [id] => 1
-)
-UPDATE stat SET description = :description WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [title] => Solutions
-    [id] => 1
-)
-UPDATE stat SET title = :title WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [icon] => bi bi-emoji-smile
-    [id] => 1
-)
-UPDATE stat SET icon = :icon WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [value] => 5
-    [id] => 1
-)
-UPDATE stat SET value = :value WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [description] => apportées aux clients
-    [id] => 1
-)
-UPDATE stat SET description = :description WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [icon] => bi bi-emoji-smile
-    [id] => 1
-)
-UPDATE stat SET icon = :icon WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [title] => Solutions
-    [id] => 1
-)
-UPDATE stat SET title = :title WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [value] => 5
-    [id] => 1
-)
-UPDATE stat SET value = :value WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [description] => apportées aux clients
-    [id] => 1
-)
-UPDATE stat SET description = :description WHERE id = :id
-EXECUTE RESULT: true
-INSERT INTO stat (icon) VALUES (:icon)
-table: stat
+INSERT INTO parcours_xppro (title,content,date_range) VALUES (:title, :content, :date_range)
+table: parcours_xppro
 Array
 (
     [0] => 
     [1] => 
     [2] => 
 )
-table: stat
+table: parcours_xppro
+DELETE  FROM parcours_xppro WHERE id=:id
+
+--- NOUVELLE REQUETE ---
+table: parcours_xppro
 DATA: Array
 (
-    [title] => cgbxg
-    [id] => 4
+    [title] => Stage - Deuxième année de BTS
+    [content] => - Amélioration design de site internet client
+- 
+    [date_range] => janvier 2025 - 21 fevrier 2025
+    [id] => 2
 )
-UPDATE stat SET title = :title WHERE id = :id
+UPDATE parcours_xppro SET title = :title, content = :content, date_range = :date_range WHERE id = :id
 EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [value] => 2
-    [id] => 4
-)
-UPDATE stat SET value = :value WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [description] => sgsgsgr
-    [id] => 4
-)
-UPDATE stat SET description = :description WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [icon] => bi bi-emoji-smile
-    [id] => 4
-)
-UPDATE stat SET icon = :icon WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [description] => sgsgsgr
-    [id] => 4
-)
-UPDATE stat SET description = :description WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [title] => cgbxg
-    [id] => 4
-)
-UPDATE stat SET title = :title WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [value] => 2
-    [id] => 4
-)
-UPDATE stat SET value = :value WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [value] => 
-    [id] => 4
-)
-UPDATE stat SET value = :value WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [icon] => 
-    [id] => 4
-)
-UPDATE stat SET icon = :icon WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [title] => 
-    [id] => 4
-)
-UPDATE stat SET title = :title WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [description] => 
-    [id] => 4
-)
-UPDATE stat SET description = :description WHERE id = :id
-EXECUTE RESULT: true
-INSERT INTO stat (icon) VALUES (:icon)
-table: stat
+table: parcours_xppro
+DELETE  FROM parcours_xppro WHERE id=:id
+table: parcours_xppro
+DELETE  FROM parcours_xppro WHERE id=:id
+INSERT INTO parcours_xppro (title,content,date_range) VALUES (:title, :content, :date_range)
+table: parcours_xppro
 Array
 (
     [0] => 
     [1] => 
     [2] => 
 )
-table: stat
-DATA: Array
+INSERT INTO parcours_xppro (title,content,date_range) VALUES (:title, :content, :date_range)
+table: parcours_xppro
+Array
 (
-    [value] => 6
-    [id] => 5
+    [0] => 
+    [1] => 
+    [2] => 
 )
-UPDATE stat SET value = :value WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
+INSERT INTO parcours_xppro (title,content,date_range) VALUES (:title, :content, :date_range)
+table: parcours_xppro
+Array
 (
-    [title] => joih
-    [id] => 5
+    [0] => 
+    [1] => 
+    [2] => 
 )
-UPDATE stat SET title = :title WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DATA: Array
-(
-    [description] => hhohh
-    [id] => 5
-)
-UPDATE stat SET description = :description WHERE id = :id
-EXECUTE RESULT: true
-table: stat
-DELETE  FROM stat WHERE id=:id
+table: parcours_xppro
+DELETE  FROM parcours_xppro WHERE id=:id

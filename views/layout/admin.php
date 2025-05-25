@@ -133,7 +133,7 @@
 
   <!-- Main JS File -->
   <script src="webroot/js/main.js"></script>
-
+  <script src="webroot/js/portfolios.js"></script>
 </body>
 
 </html>

@@ -40,10 +40,8 @@
     <?php if ($this->Session->isLogged()): ?>
       <div class="text-center">
         <button
-          class="btn btn-outline-primary btn-sm mt-4"
-          data-bs-toggle="modal"
-          data-bs-target="#statsModal"
-          id="add-Item-btn"
+          class="btn btn-outline-primary add-Item-btn btn-sm mt-4 "
+          id="add-stat-btn"
         >
           <i class="bi bi-plus-circle"></i> Ajouter un item
         </button>
