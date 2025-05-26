@@ -47,4 +47,38 @@ class Portfolio extends Model {
         }
     }
 
+    public function getPortfolioItemById($id) {
+        $this->setTable('portfolio_item');
+        return $this->findfirst([
+            'condition' => "id = $id"
+        ]);
+    }
+
+    public function getImages($portfolio_id) {
+    $this->setTable('portfolio_image');
+    return $this->find(['condition' => "portfolio_id = $portfolio_id", 'order' => 'id ASC']);
+    }
+
+    public function addImage($portfolio_id, $img_link) {
+        $this->setTable('portfolio_image');
+        return $this->save(['portfolio_id' => $portfolio_id, 'img_link' => $img_link]);
+    }
+
+    public function deleteImage($id) {
+        $this->setTable('portfolio_image');
+        $this->id = $id;
+        return $this->delete();
+    }
+
+public function findCount($params = []) {
+    $data = [
+        'fields' => 'COUNT(*) as cnt'
+    ];
+    if (!empty($params['condition'])) {
+        $data['condition'] = $params['condition'];
+    }
+    $result = $this->find($data);
+    return isset($result[0]->cnt) ? intval($result[0]->cnt) : 0;
+}
+
 }

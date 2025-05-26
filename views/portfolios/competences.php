@@ -95,4 +95,6 @@
       </div>
     </div>
   </div>
+
+  
 </section><!-- /competences Section -->

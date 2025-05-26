@@ -182,7 +182,4 @@ class model {
             return false;
         }
     }
-
-   
-
 }

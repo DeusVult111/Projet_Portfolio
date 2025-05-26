@@ -34,6 +34,9 @@ class Portfolios extends Controller {
         $this->Portfolio->setTable('portfolio');
         $d['portfolio'] = $this->Portfolio->getSections();
 
+        $this->Portfolio->setTable('portfolio_item');
+        $d['portfolio_items'] = $this->Portfolio->getSections();
+
         $this->Portfolio->setTable('savoir_faire');
         $d['savoir_faire'] = $this->Portfolio->getSections();
 
@@ -84,8 +87,7 @@ class Portfolios extends Controller {
 '               title', 'date_range', 'content',
 
                 // portfolio
-                'technology', 'year', 'model', 'link',
-
+                'technology', 'year', 'model', 'link', 'category',
                 // savoir_faire
                 // (déjà inclus: title, content)
 
@@ -157,4 +159,76 @@ class Portfolios extends Controller {
         die();
     }
 
+    public function detail($id = null) {
+        if (empty($id) || !is_numeric($id)) {
+            $this->Session->setFlash('Projet introuvable.', '<i class="bi bi-exclamation-circle"></i>', 'danger');
+            header('Location: /' . WEBROOT2 . '/');
+            exit;
+        }
+
+        $item = $this->Portfolio->getPortfolioItemById($id);
+
+        if (!$item) {
+            $this->Session->setFlash('Projet introuvable.', '<i class="bi bi-exclamation-circle"></i>', 'danger');
+            header('Location: /' . WEBROOT2 . '/');
+            exit;
+        }
+        $images = $this->Portfolio->getImages($id);
+
+        // Passe bien $images à la vue
+        $this->set(['item' => $item, 'images' => $images]);
+        $this->render('portfolio_detail');
+    }
+
+    // AJAX pour upload image
+public function ajaxAddPortfolioImage() {
+    if ($this->Session->isLogged() && !empty($_POST['portfolio_id']) && !empty($_FILES['image'])) {
+        $portfolio_id = intval($_POST['portfolio_id']);
+        $file = $_FILES['image'];
+        $targetDir = 'webroot/img/portfolio/';
+        $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+
+        // Compte le nombre d'images déjà présentes pour ce projet
+        $this->Portfolio->setTable('portfolio_image');
+        $count = $this->Portfolio->findCount(['condition' => "portfolio_id = $portfolio_id"]);
+
+        // Numéro suivant pour ce projet
+        $num = $count + 1;
+
+        // Nom du fichier : [idprojet]_[num].[ext]
+        $fileName = $portfolio_id . '_' . $num . '.' . $ext;
+        $targetPath = $targetDir . $fileName;
+
+        // Si le fichier existe déjà, on incrémente jusqu'à trouver un nom libre
+        while (file_exists($targetPath)) {
+            $num++;
+            $fileName = $portfolio_id . '_' . $num . '.' . $ext;
+            $targetPath = $targetDir . $fileName;
+        }
+
+        if (move_uploaded_file($file['tmp_name'], $targetPath)) {
+            $this->Portfolio->addImage($portfolio_id, $targetPath);
+            echo json_encode(['status' => 'success', 'img_link' => $targetPath]);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Erreur upload']);
+        }
+    }
+    die();
+}
+
+    // AJAX pour suppression image
+    public function ajaxDeletePortfolioImage() {
+        if ($this->Session->isLogged() && !empty($_POST['image_id'])) {
+            $image_id = intval($_POST['image_id']);
+            $this->Portfolio->setTable('portfolio_image');
+            $img = $this->Portfolio->findfirst(['condition' => "id = $image_id"]);
+            if ($img && file_exists($img->img_link)) {
+                unlink($img->img_link);
+            }
+            $this->Portfolio->deleteImage($image_id);
+            echo json_encode(['status' => 'success']);
+        }
+        die();
+    }
+    
 }

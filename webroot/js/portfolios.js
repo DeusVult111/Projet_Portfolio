@@ -136,6 +136,32 @@ window.deleteParcoursXppro = function(id) {
   })
   .catch(() => showFlash('error', 'Erreur réseau'));
 };
+
+//---------------------------------------------------------------
+// Gestion des boutons "supprimer" de portfolio
+//---------------------------------------------------------------
+// Suppression
+window.deletePortfolioItem = function(id) {
+  if (!confirm('Voulez-vous vraiment supprimer ce projet ?')) return;
+  fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeleteItem', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `id=${encodeURIComponent(id)}&table=portfolio_item`
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success') {
+      showFlash('success', 'Suppression réussie');
+      setTimeout(() => location.reload(), 600);
+    } else {
+      showFlash('error', data.message || 'Erreur lors de la suppression');
+    }
+  })
+  .catch(() => showFlash('error', 'Erreur réseau'));
+};
+
+//---------------------------------------------------------------
+
 document.addEventListener('DOMContentLoaded', function () {
 
 //---------------------------------------------------------------
@@ -529,5 +555,74 @@ document.querySelectorAll('.edit-formation-btn').forEach(function(btn) {
     openModal('parcoursModal');
   });
 });
+
+//---------------------------------------------------------------
+// Gestion modification/ajout portfolio
+//---------------------------------------------------------------
+
+document.getElementById('add-portfolio-btn')?.addEventListener('click', function() {
+  fetch('/' + window.WEBROOT2 + '/portfolios/ajaxUpdateField', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: 'table=portfolio_item'
+      + '&title=' + encodeURIComponent('-- Titre du projet --')
+      + '&content=' + encodeURIComponent('-- Description du projet --')
+      + '&technology=' + encodeURIComponent('-- Champs à remplir --')
+      + '&year=0000'
+      + '&model=' + encodeURIComponent('-- Champs à remplir --')
+      + '&link=' + encodeURIComponent('-- Champs à remplir --')
+      + '&category=php'
+      + '&img_link=' + encodeURIComponent('webroot/img/portfolio/photo-vide.png')
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success' && data.id) {
+      window.location.href = '/' + WEBROOT2 + '/portfolios/detail/' + data.id;
+    } else {
+      showFlash('error', data.message || 'Erreur lors de la création');
+    }
+  });
+});
+
+//----------------------------------------------------------------
+// Gestion de la modale d'édition des images du portfolio
+//----------------------------------------------------------------
+// Ouvre la modale
+document.getElementById('edit-images-btn')?.addEventListener('click', function() {
+  openModal('editImagesModal');
+});
+
+// Ajout image
+document.getElementById('addImageForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+  fetch('/' + window.WEBROOT2 + '/portfolios/ajaxAddPortfolioImage', {
+    method: 'POST',
+    body: formData
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.status === 'success') location.reload();
+    else showFlash('error', data.message || 'Erreur lors de l\'ajout');
+  });
+});
+
+// Suppression image
+document.querySelectorAll('.delete-image-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    if (!confirm('Supprimer cette image ?')) return;
+    fetch('/' + window.WEBROOT2 + '/portfolios/ajaxDeletePortfolioImage', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: 'image_id=' + encodeURIComponent(this.dataset.id)
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.status === 'success') location.reload();
+      else showFlash('error', data.message || 'Erreur lors de la suppression');
+    });
+  });
+});
+
 
 });

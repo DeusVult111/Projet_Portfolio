@@ -80,3 +80,934 @@ Array
 )
 table: parcours_xppro
 DELETE  FROM parcours_xppro WHERE id=:id
+INSERT INTO portfolio_item (title,content) VALUES (:title, :content)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_item (title,content) VALUES (:title, :content)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_item (title,content) VALUES (:title, :content)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_item (title,content,technology,year,model,link) VALUES (:title, :content, :technology, :year, :model, :link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_item (title,content,technology,year,model,link) VALUES (:title, :content, :technology, :year, :model, :link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_item (title,content,technology,year,model,link) VALUES (:title, :content, :technology, :year, :model, :link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [link] => ( ! ) Deprecated: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\wamp64\www\Projet_Portfolio\views\portfolios\portfolio_detail.php on line 88
+Call Stack
+#	Time	Memory	Function	Location
+1	0.0008	363256	{main}( )	...\index.php:0
+2	0.0029	412968	Portfolios->detail( $id = '9' )	...\index.php:46
+3	0.0035	414368	controller->render( $filename = 'portfolio_detail' )	...\portfolios.php:178
+4	0.0793	432896	require( 'C:\wamp64\www\Projet_Portfolio\views\portfolios\portfolio_detail.php )	...\controller.php:29
+5	0.0794	432896	htmlspecialchars( $string = NULL )	...\portfolio_detail.php:88
+    [id] => 1
+)
+UPDATE portfolio_item SET link = :link WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [link] => 
+    [id] => 1
+)
+UPDATE portfolio_item SET link = :link WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [model] => CRUD PHP, xdhht
+    [id] => 9
+)
+UPDATE portfolio_item SET model = :model WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [model] => CRUD PHP
+    [id] => 9
+)
+UPDATE portfolio_item SET model = :model WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [title] => Application de gestion de bandes dessinées255
+    [id] => 9
+)
+UPDATE portfolio_item SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [title] => Application de gestion de bandes dessinées
+    [id] => 9
+)
+UPDATE portfolio_item SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [content] => Application permettant de gérer une collection de bandes dessinéeshjkh
+    [id] => 9
+)
+UPDATE portfolio_item SET content = :content WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [content] => Application permettant de gérer une collection de bandes dessinées
+    [id] => 9
+)
+UPDATE portfolio_item SET content = :content WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_image
+DELETE  FROM portfolio_image WHERE id=:id
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_image
+DELETE  FROM portfolio_image WHERE id=:id
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_image
+DELETE  FROM portfolio_image WHERE id=:id
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_image
+DELETE  FROM portfolio_image WHERE id=:id
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category,img_link) VALUES (:title, :content, :technology, :year, :model, :link, :category, :img_link)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+Erreur SQL : Erreur lors de l'insertion.
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category) VALUES (:title, :content, :technology, :year, :model, :link, :category)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [title] => Zeubi
+    [id] => 10
+)
+UPDATE portfolio_item SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category) VALUES (:title, :content, :technology, :year, :model, :link, :category)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category) VALUES (:title, :content, :technology, :year, :model, :link, :category)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category) VALUES (:title, :content, :technology, :year, :model, :link, :category)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category) VALUES (:title, :content, :technology, :year, :model, :link, :category)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category) VALUES (:title, :content, :technology, :year, :model, :link, :category)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [title] => Site collège Saint Dominique
+    [id] => 15
+)
+UPDATE portfolio_item SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [content] => Site vitrine présentatn le collège de Saint Dominique
+    [id] => 15
+)
+UPDATE portfolio_item SET content = :content WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [technology] => CMS Propriétaire
+    [id] => 15
+)
+UPDATE portfolio_item SET technology = :technology WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [year] => 2025
+    [id] => 15
+)
+UPDATE portfolio_item SET year = :year WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [model] => CMS
+    [id] => 15
+)
+UPDATE portfolio_item SET model = :model WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: portfolio_item
+DATA: Array
+(
+    [category] => cms
+    [id] => 15
+)
+UPDATE portfolio_item SET category = :category WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: savoir_faire
+DATA: Array
+(
+    [content] => Création de sites modernes et responsives avec un design intuitif. Utilisation des technologies HTML, CSS, PHP, JavaScript et frameworks adapté
+    [id] => 24
+)
+UPDATE savoir_faire SET content = :content WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: accueil
+DATA: Array
+(
+    [title] => Nathan
+    [id] => 1
+)
+UPDATE accueil SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: accueil
+DATA: Array
+(
+    [title] => Nathan LAC
+    [id] => 1
+)
+UPDATE accueil SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category) VALUES (:title, :content, :technology, :year, :model, :link, :category)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO portfolio_image (portfolio_id,img_link) VALUES (:portfolio_id, :img_link)
+table: portfolio_image
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)

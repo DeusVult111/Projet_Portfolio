@@ -101,32 +101,621 @@ Array
 )
 RETOUR JSON: {"status":"success","id":2}
 
+
+Stage - Deuxième année de BTS
+janvier 2025 - 21 fevrier 2025
+
+- Amélioration design de site internet client
+- 
+
+Stage - Première année de BTS
+3 juin 2024 - 27 juin 2024
+
+Création d'un site vitrine pour une association
 --- NOUVELLE REQUETE ---
 Array
 (
-    [title] => Stage - Première année de BTS
-    [date_range] => 3 juin 2024 - 27 juin 2024
-    [content] => Création d'un site vitrine pour une association
-    [table] => parcours_xppro
+    [table] => portfolio_item
+    [title] => 
+    [content] => 
+    [category] => php
 )
-RETOUR JSON: {"status":"success","id":"5"}
+RETOUR JSON: {"status":"success","id":"10"}
 
 --- NOUVELLE REQUETE ---
 Array
 (
-    [title] => Stage - Deuxième année de BTS
-    [date_range] => janvier 2025 - 21 fevrier 2025
-    [content] => Amélioration design de site internet client
-    [table] => parcours_xppro
+    [table] => portfolio_item
+    [title] => 
+    [content] => 
+    [category] => php
 )
-RETOUR JSON: {"status":"success","id":"6"}
+RETOUR JSON: {"status":"success","id":"11"}
 
 --- NOUVELLE REQUETE ---
 Array
 (
-    [title] => jhfhf
-    [date_range] => yjdjyj
-    [content] => dyjdyjdtyjdyt
-    [table] => parcours_xppro
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
 )
-RETOUR JSON: {"status":"success","id":"7"}
+RETOUR JSON: {"status":"success","id":"12"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => -- Champs à remplir --
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"13"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"14"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"15"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"16"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"17"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 1
+    [field] => link
+    [value] => ( ! ) Deprecated: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\wamp64\www\Projet_Portfolio\views\portfolios\portfolio_detail.php on line 88
+Call Stack
+#	Time	Memory	Function	Location
+1	0.0008	363256	{main}( )	...\index.php:0
+2	0.0029	412968	Portfolios->detail( $id = '9' )	...\index.php:46
+3	0.0035	414368	controller->render( $filename = 'portfolio_detail' )	...\portfolios.php:178
+4	0.0793	432896	require( 'C:\wamp64\www\Projet_Portfolio\views\portfolios\portfolio_detail.php )	...\controller.php:29
+5	0.0794	432896	htmlspecialchars( $string = NULL )	...\portfolio_detail.php:88
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":1}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 1
+    [field] => link
+    [value] => 
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":1}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 9
+    [field] => model
+    [value] => CRUD PHP, xdhht
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":9}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 9
+    [field] => model
+    [value] => CRUD PHP
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":9}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 9
+    [field] => title
+    [value] => Application de gestion de bandes dessinées255
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":9}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 9
+    [field] => title
+    [value] => Application de gestion de bandes dessinées
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":9}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 9
+    [field] => content
+    [value] => Application permettant de gérer une collection de bandes dessinéeshjkh
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":9}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 9
+    [field] => content
+    [value] => Application permettant de gérer une collection de bandes dessinées
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":9}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":null}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"10"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 10
+    [field] => title
+    [value] => Zeubi
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":10}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"11"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"12"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Champs à remplir --
+    [content] => -- Champs à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"13"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Titre à remplir --
+    [content] => -- Contenu à remplir --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"14"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Titre du projet --
+    [content] => -- Description du projet --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"15"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 15
+    [field] => title
+    [value] => Site collège Saint Dominique
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":15}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 15
+    [field] => content
+    [value] => Site vitrine présentatn le collège de Saint Dominique
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":15}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 15
+    [field] => technology
+    [value] => CMS Propriétaire
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":15}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 15
+    [field] => year
+    [value] => 2025
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":15}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 15
+    [field] => model
+    [value] => CMS
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":15}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 15
+    [field] => category
+    [value] => cms
+    [table] => portfolio_item
+)
+RETOUR JSON: {"status":"success","id":15}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 24
+    [field] => content
+    [value] => Création de sites modernes et responsives avec un design intuitif. Utilisation des technologies HTML, CSS, PHP, JavaScript et frameworks adapté
+    [table] => savoir_faire
+)
+RETOUR JSON: {"status":"success","id":24}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+    [table] => accueil
+)
+RETOUR JSON: {"status":"success","id":1}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+RETOUR JSON: {"status":"success","id":1}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Titre du projet --
+    [content] => -- Description du projet --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"10"}

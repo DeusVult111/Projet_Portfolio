@@ -1158,6 +1158,142 @@ section,
   object-fit: cover;
   border-radius: 15px;
 }
+
+/*--------------------------------------------------------------
+# Portfolio Details Section
+--------------------------------------------------------------*/
+.page-title .btn-return {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 20px;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px rgba(20, 157, 221, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 25px;
+}
+
+.page-title .btn-return:hover,
+.page-title .btn-return:focus {
+  background-color: var(--contrast-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  text-decoration: none;
+}
+
+.page-title h1 {
+  margin-right: 45px;
+}
+
+/* Portfolio Details - Image List in Modal */
+.portfolio-details .image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-details .image-list-item {
+  background: var(--surface-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(20,157,221,0.08);
+  padding: 10px 8px 8px 8px;
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.portfolio-details .image-list-item:hover {
+  box-shadow: 0 4px 16px rgba(20,157,221,0.18);
+}
+
+.portfolio-details .image-list-item img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  background: #f4fafd;
+  border: 1px solid #e9eaeb;
+}
+
+.portfolio-details .image-list-item .btn-danger {
+  background: var(--delete-color);
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+
+.portfolio-details .image-list-item .btn-danger:hover {
+  background: #b52a37;
+}
+
+/* Bouton ajout (plus) dans la modal images */
+.portfolio-details .image-list + .btn,
+#addImageForm .btn-success,
+#addImageForm .btn.btn-sm {
+  background: var(--accent-color) !important;
+  color: var(--contrast-color) !important;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#addImageForm .btn-success:hover,
+#addImageForm .btn.btn-sm:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%) !important;
+  color: var(--contrast-color) !important;
+}
+
+/* Icône plus devant "Ajouter une image" en accent-color */
+#addImageForm label .bi-plus-circle {
+  color: var(--accent-color) !important;
+  font-size: 1.3em;
+  vertical-align: middle;
+}
+
+/* Bouton suppression (poubelle) en delete-color */
+.portfolio-details .image-list .image-list-item .delete-image-btn {
+  background: var(--delete-color) !important;
+  color: var(--contrast-color) !important;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-details .image-list .image-list-item .delete-image-btn:hover {
+  background: #b52a37 !important;
+  color: var(--contrast-color) !important;
+}
+
+/* Icône poubelle en blanc dans le bouton suppression */
+.portfolio-details .image-list .image-list-item .delete-image-btn .bi-trash {
+  color: var(--contrast-color) !important;
+  font-size: 1.2em;
+}
 /*--------------------------------------------------------------
 # savoir-faire Section
 --------------------------------------------------------------*/
