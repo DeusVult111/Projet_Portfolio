@@ -6,6 +6,5 @@ require 'stats.php';
 require 'competences.php';
 require 'parcours.php';
 require 'portfolio.php';
-require 'savoir_faire.php';
 require 'contact.php';
 ?>

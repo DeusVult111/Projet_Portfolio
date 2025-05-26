@@ -226,8 +226,26 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  const cloneEl = document.querySelector(".logos-slide").cloneNode(true)
-  const logos = document.querySelector('.logos').appendChild(cloneEl);
+  document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const data = new FormData(form);
+    fetch('/' + window.WEBROOT2 + '/portfolios/ajaxContactMessage', {
+      method: 'POST',
+      body: data
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.status === 'success') {
+        form.reset();
+        showFlash('success', data.message);
+      } else {
+        showFlash('error', data.message);
+      }
+    })
+    .catch(() => showFlash('error', 'Erreur lors de l\'envoi.'));
+  });
+  
 })();
 
 window.showFlash = function(type, message) {

@@ -231,4 +231,28 @@ public function ajaxAddPortfolioImage() {
         die();
     }
     
+    public function ajaxContactMessage() {
+    if (
+        !empty($_POST['name']) &&
+        !empty($_POST['email']) &&
+        !empty($_POST['subject']) &&
+        !empty($_POST['message'])
+    ) {
+        $this->Portfolio->setTable('message');
+        $data = [
+            'name' => htmlspecialchars($_POST['name']),
+            'email' => htmlspecialchars($_POST['email']),
+            'subject' => htmlspecialchars($_POST['subject']),
+            'content' => htmlspecialchars($_POST['message'])
+        ];
+        if ($this->Portfolio->save($data)) {
+            echo json_encode(['status' => 'success', 'message' => 'Message enregistré !']);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Erreur lors de l\'enregistrement.']);
+        }
+    } else {
+        echo json_encode(['status' => 'error', 'message' => 'Tous les champs sont obligatoires.']);
+    }
+    die();
+}
 }

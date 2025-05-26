@@ -79,22 +79,6 @@
           </div>
         </div>
       </div>
-    
-    <div class="logos overflow-hidden py-5 px-0 position-relative" style="white-space: nowrap;">
-      <div class="logos-slide d-inline-block">
-        <img src="webroot/img/logo_language/html-5-svgrepo-com.svg" alt="Logo 1">
-        <img src="webroot/img/logo_language/php-1-logo-svgrepo-com.svg" alt="Logo 2">
-        <img src="webroot/img/logo_language/css-3-logo-svgrepo-com.svg" alt="Logo 3">
-        <img src="webroot/img/logo_language/wordpress-svgrepo-com.svg" alt="Logo 4">
-        <img src="webroot/img/logo_language/javascript-svgrepo-com.svg" alt="Logo 5">
-        <img src="webroot/img/logo_language/c-sharp-svgrepo-com.svg" alt="Logo 6">
-        <img src="webroot/img/logo_language/python-svgrepo-com.svg" alt="Logo 7">
-        <img src="webroot/img/logo_language/sql-database-generic-svgrepo-com.svg" alt="Logo 8">
-        <img src="webroot/img/logo_language/git-svgrepo-com.svg" alt="Logo 9">
-        <img src="webroot/img/logo_language/github-142-svgrepo-com.svg" alt="Logo 10">
-      </div>
-    </div>
-  </div>
-
+  
   
 </section><!-- /competences Section -->

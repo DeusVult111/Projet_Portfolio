@@ -719,3 +719,1094 @@ Array
     [img_link] => webroot/img/portfolio/photo-vide.png
 )
 RETOUR JSON: {"status":"success","id":"10"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan
+    [table] => accueil
+)
+RETOUR JSON: {"status":"success","id":1}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 1
+    [field] => title
+    [value] => Nathan LAC
+    [table] => accueil
+)
+RETOUR JSON: {"status":"success","id":1}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"4"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 4
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":4}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 4
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":4}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 4
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":4}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"5"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 5
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":5}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 5
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":5}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 5
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":5}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"6"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 6
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":6}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 6
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":6}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 6
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":6}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"7"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 7
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":7}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 7
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":7}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 7
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":7}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"8"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 8
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":8}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 8
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":8}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 8
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":8}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"9"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 9
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":9}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 9
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":9}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 9
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":9}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"10"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 10
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":10}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 10
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":10}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 10
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":10}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"11"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 11
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":11}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 11
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":11}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 11
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":11}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"12"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 12
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":12}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 12
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":12}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 12
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":12}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"13"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 13
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":13}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 13
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":13}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 13
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":13}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"14"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 14
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":14}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 14
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":14}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 14
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":14}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"15"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 15
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":15}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 15
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":15}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 15
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":15}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"16"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 16
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":16}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 16
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":16}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 16
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":16}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"17"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 17
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":17}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 17
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":17}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 17
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":17}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"18"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 18
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":18}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 18
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":18}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 18
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":18}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"19"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 19
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":19}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 19
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":19}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 19
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":19}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"20"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 20
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":20}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 20
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":20}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 20
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":20}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"21"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 21
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":21}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 21
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":21}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 21
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":21}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"22"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 22
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":22}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 22
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":22}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 22
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":22}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"23"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 23
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":23}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 23
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":23}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 23
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":23}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"24"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 24
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":24}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 24
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":24}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 24
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":24}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => gbdsth
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"25"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 25
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":25}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 25
+    [field] => title
+    [value] => ztghzrh
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":25}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 25
+    [field] => description
+    [value] => zryzy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":25}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [name] => "é("(
+    [value] => 7
+    [table] => competences_item
+)
+RETOUR JSON: {"status":"success","id":"11"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [name] => "é("(
+    [value] => 7
+    [table] => competences_item
+)
+RETOUR JSON: {"status":"success","id":"12"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [name] => "é("(
+    [value] => 7
+    [table] => competences_item
+)
+RETOUR JSON: {"status":"success","id":"13"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [name] => "é("(
+    [value] => 7
+    [table] => competences_item
+)
+RETOUR JSON: {"status":"success","id":"14"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [name] => "é("(
+    [value] => 7
+    [table] => competences_item
+)
+RETOUR JSON: {"status":"success","id":"15"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [name] => "é("(
+    [value] => 7
+    [table] => competences_item
+)
+RETOUR JSON: {"status":"success","id":"16"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [name] => "é("(
+    [value] => 7
+    [table] => competences_item
+)
+RETOUR JSON: {"status":"success","id":"17"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [name] => "é("(
+    [value] => 7
+    [table] => competences_item
+)
+RETOUR JSON: {"status":"success","id":"18"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => tsgz(r
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"26"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 26
+    [field] => value
+    [value] => 4
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":26}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 26
+    [field] => title
+    [value] => a'ta't
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":26}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 26
+    [field] => description
+    [value] => at'ta'
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":26}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => tuy
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"27"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 27
+    [field] => title
+    [value] => fkuk
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":27}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 27
+    [field] => description
+    [value] => fukfuyk
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":27}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 27
+    [field] => value
+    [value] => 3
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":27}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [field] => icon
+    [value] => fyjrtyj
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":"28"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 28
+    [field] => description
+    [value] => etjytyjty
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":28}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 28
+    [field] => title
+    [value] => ejetyj
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":28}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [id] => 28
+    [field] => value
+    [value] => 5
+    [table] => stat
+)
+RETOUR JSON: {"status":"success","id":28}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [name] => tiyetèu
+    [value] => 4
+    [table] => competences_item
+)
+RETOUR JSON: {"status":"success","id":"19"}
+
+--- NOUVELLE REQUETE ---
+Array
+(
+    [table] => portfolio_item
+    [title] => -- Titre du projet --
+    [content] => -- Description du projet --
+    [technology] => -- Champs à remplir --
+    [year] => 0000
+    [model] => -- Champs à remplir --
+    [link] => -- Champs à remplir --
+    [category] => php
+    [img_link] => webroot/img/portfolio/photo-vide.png
+)
+RETOUR JSON: {"status":"success","id":"11"}

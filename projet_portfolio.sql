@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 26 mai 2025 à 00:05
+-- Généré le : lun. 26 mai 2025 à 09:25
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.2.0
 
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `competences_item` (
   `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `value` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `competences_item`
@@ -121,35 +121,6 @@ INSERT INTO `competences_item` (`id`, `name`, `value`) VALUES
 (8, 'C#', 40),
 (9, 'SQL', 65),
 (10, 'Github', 80);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `competences_logo`
---
-
-DROP TABLE IF EXISTS `competences_logo`;
-CREATE TABLE IF NOT EXISTS `competences_logo` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `img_link` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `competences_logo`
---
-
-INSERT INTO `competences_logo` (`id`, `img_link`) VALUES
-(1, 'webroot/img/logo_language/html-5-svgrepo-com.svg'),
-(2, 'webroot/img/logo_language/php-1-logo-svgrepo-com.svg'),
-(3, 'webroot/img/logo_language/css-3-logo-svgrepo-com.svg'),
-(4, 'webroot/img/logo_language/wordpress-svgrepo-com.svg'),
-(5, 'webroot/img/logo_language/javascript-svgrepo-com.svg'),
-(6, 'webroot/img/logo_language/c-sharp-svgrepo-com.svg'),
-(7, 'webroot/img/logo_language/python-svgrepo-com.svg'),
-(8, 'webroot/img/logo_language/sql-database-generic-svgrepo-com.svg'),
-(9, 'webroot/img/logo_language/git-svgrepo-com.svg'),
-(10, 'webroot/img/logo_language/github-142-svgrepo-com.svg');
 
 -- --------------------------------------------------------
 
@@ -329,7 +300,7 @@ CREATE TABLE IF NOT EXISTS `portfolio_item` (
   `link` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `category` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT 'php',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `portfolio_item`
@@ -384,7 +355,7 @@ CREATE TABLE IF NOT EXISTS `stat` (
   `title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `stat`
@@ -423,6 +394,16 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`, `created_at`) VALUES
 --
 -- Contraintes pour les tables déchargées
 --
+
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE IF NOT EXISTS message (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  subject VARCHAR(150) NOT NULL,
+  content TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Contraintes pour la table `portfolio_image`

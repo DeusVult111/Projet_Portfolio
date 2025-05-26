@@ -1011,3 +1011,1067 @@ Array
     [1] => 
     [2] => 
 )
+
+--- NOUVELLE REQUETE ---
+table: accueil
+DATA: Array
+(
+    [title] => Nathan
+    [id] => 1
+)
+UPDATE accueil SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: accueil
+DATA: Array
+(
+    [title] => Nathan LAC
+    [id] => 1
+)
+UPDATE accueil SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 4
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 4
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 4
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 5
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 5
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 5
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 6
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 6
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 6
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 7
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 7
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 7
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 8
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 8
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 8
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 9
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 9
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 9
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 10
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 10
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 10
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 11
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 11
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 11
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 12
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 12
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 12
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 13
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 13
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 13
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 14
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 14
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 14
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 15
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 15
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 15
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 16
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 16
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 16
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 17
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 17
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 17
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 18
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 18
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 18
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 19
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 19
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 19
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 20
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 20
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 20
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 21
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 21
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 21
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 22
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 22
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 22
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 23
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 23
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 23
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 24
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 24
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 24
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 25
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ztghzrh
+    [id] => 25
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => zryzy
+    [id] => 25
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+INSERT INTO competences_item (value,name) VALUES (:value, :name)
+table: competences_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO competences_item (value,name) VALUES (:value, :name)
+table: competences_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO competences_item (value,name) VALUES (:value, :name)
+table: competences_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO competences_item (value,name) VALUES (:value, :name)
+table: competences_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO competences_item (value,name) VALUES (:value, :name)
+table: competences_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO competences_item (value,name) VALUES (:value, :name)
+table: competences_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO competences_item (value,name) VALUES (:value, :name)
+table: competences_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+INSERT INTO competences_item (value,name) VALUES (:value, :name)
+table: competences_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: stat
+DELETE  FROM stat WHERE id=:id
+table: stat
+DELETE  FROM stat WHERE id=:id
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 4
+    [id] => 26
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => a'ta't
+    [id] => 26
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => at'ta'
+    [id] => 26
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+table: stat
+DELETE  FROM stat WHERE id=:id
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => fkuk
+    [id] => 27
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => fukfuyk
+    [id] => 27
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 3
+    [id] => 27
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+table: stat
+DELETE  FROM stat WHERE id=:id
+INSERT INTO stat (icon) VALUES (:icon)
+table: stat
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [description] => etjytyjty
+    [id] => 28
+)
+UPDATE stat SET description = :description WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [title] => ejetyj
+    [id] => 28
+)
+UPDATE stat SET title = :title WHERE id = :id
+EXECUTE RESULT: true
+
+--- NOUVELLE REQUETE ---
+table: stat
+DATA: Array
+(
+    [value] => 5
+    [id] => 28
+)
+UPDATE stat SET value = :value WHERE id = :id
+EXECUTE RESULT: true
+table: stat
+DELETE  FROM stat WHERE id=:id
+INSERT INTO competences_item (value,name) VALUES (:value, :name)
+table: competences_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: competences_item
+DELETE  FROM competences_item WHERE id=:id
+INSERT INTO portfolio_item (title,content,technology,year,model,link,category) VALUES (:title, :content, :technology, :year, :model, :link, :category)
+table: portfolio_item
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+)
+table: portfolio_item
+DELETE  FROM portfolio_item WHERE id=:id
